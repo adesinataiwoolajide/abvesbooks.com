@@ -114,13 +114,13 @@
 			return $query->fetchAll(PDO::FETCH_ASSOC);
 		}		
 
-		public function getCustomerOrderDetails()
+		public function getCustomerOrderDetails($orderId)
 		{
 			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("SELECT * FROM customer_order_details WHERE order_id = :order_id");
-			$query->bindValue(":order_id", $this->orderId);			
+			$query = $db->prepare("SELECT * FROM customer_order WHERE order_id = :orderId");
+			$query->bindValue(":orderId", $orderId);			
 			$query->execute();
-			return $query->fetchAll(PDO::FETCH_ASSOC);
+			return $query->fetch();
 		}
 
 		public function getOrderTotalAmount()
@@ -204,69 +204,7 @@
 			$query->execute();
 			return true;
 		}
-
-		public function notifyUnpricedOrders()
-		{
-			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("INSERT INTO price_request (order_id, customer_id, status) VALUES (:order_id, :customer_id, :status)");
-			$query->bindValue(":order_id", $this->orderId);
-			$query->bindValue(":customer_id", $this->customerId);
-			$query->bindValue(":status", $this->status);
-			if($query->execute()){
-				return true;
-			}
-			return false;
-		}
-
-		public function getPriceRequest()
-		{
-			$db = Database::getInstance()->getConnection();
-			$query = $db->query("SELECT * FROM price_request ORDER BY id DESC");
-			return $query->fetchAll(PDO::FETCH_ASSOC);
-		}
-
-		public function paginatePriceRequest()
-		{
-			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("SELECT * FROM price_request ORDER BY id DESC LIMIT :start, :items_per_page");
-			$query->bindValue(":start", $this->start, PDO::PARAM_INT);
-			$query->bindValue(":items_per_page", $this->itemsPerPage, PDO::PARAM_INT);
-			$query->execute();
-			$fetch = $query->fetchAll(PDO::FETCH_ASSOC);
-			return $fetch;		
-		}		
-
-		public function getUnansweredPriceRequest()
-		{
-			$db = Database::getInstance()->getConnection();
-			$query = $db->query("SELECT * FROM price_request WHERE status = 0 ORDER BY id DESC");
-			return $query->fetchAll(PDO::FETCH_ASSOC);
-		}
-
-		public function savePriceRequest()
-		{
-			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("UPDATE customer_order_details SET amount = :amount WHERE id = :id");
-			$query->bindValue(":amount", $this->amount);
-			$query->bindValue(":id", $this->id);
-			if($query->execute()){
-				return true;
-			}
-			return false;
-		}
-
-		public function updatePriceRequestStatus()
-		{
-			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("UPDATE price_request SET status = :status WHERE order_id = :order_id");
-			$query->bindValue(":status", $this->status);
-			$query->bindValue(":order_id", $this->orderId);
-			if($query->execute()){
-				return true;
-			}
-			return false;
-		}
-
+		
 		public function updateOrderStatus()
 		{
 			$db = Database::getInstance()->getConnection();
@@ -290,26 +228,6 @@
 			}
 			return false;
 		}				
-
-		public function interpretOrderStatus($status)
-		{
-			if($status == 0){
-				return "Unshipped";
-			}else if($status == 1){
-				return "Shipped";
-			}elseif($status == 2){
-				return "Delivered";
-			}
-		}	
-
-		public function interpretPriceRequestStatus($status)
-		{
-			if($status == 0){
-				return "Unanswered";
-			}else if($status == 1){
-				return "Answered";
-			}
-		}
 
 		public function getAllOrders()
 		{
@@ -393,7 +311,144 @@
 				return true;
 			}
 			return false;
-		}	
+		}
+
+
+		
+		public function shipCustomerOrder()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE order_status=1 AND shipping =0 ORDER BY time_created ASC");		
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function unshippedCustomerOrder()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE order_status=1 AND shipping =1 ORDER BY time_created ASC");		
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function confirmPaymentOrder()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE paid_status=0 ORDER BY time_created ASC");		
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function singleCustomerOrder($orderId)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order_details WHERE order_id=:orderId");	
+			$query->bindValue(":orderId", $orderId);	
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function updateshipCustomerOrder($orderId, $customer_id)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET shipping=1 WHERE order_id=:orderId AND customer_id=:customer_id");	
+			$query->bindValue(":orderId", $orderId);
+			$query->bindValue(":customer_id", $customer_id);	
+			if($query->execute()){
+				return true;
+			}
+			return false;
+		}
+
+		public function unshipCustomerOrder($orderId, $customer_id)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET shipping=0 WHERE order_id=:orderId AND customer_id=:customer_id");	
+			$query->bindValue(":orderId", $orderId);
+			$query->bindValue(":customer_id", $customer_id);	
+			if($query->execute()){
+				return true;
+			}
+			return false;
+		}
+
+		public function deliverCustomerOrder()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE delivery =0 AND shipping=1 ORDER BY time_created ASC");		
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function updateDeliveryCustomerOrder($order_id)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET delivery=1 WHERE order_id=:order_id");	
+			$query->bindValue(":order_id", $this->order_id);	
+			if($query->execute()){
+				return true;
+			}
+			return false;
+		}
+
+		public function confirmPayment()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE paid_status =1 AND order_status=1 ORDER BY time_created ASC");		
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function unconfirmPayment()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE paid_status =0 AND order_status=1 ORDER BY time_created ASC");		
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+		public function updatePaymentCustomerOrder($order_id)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET paid_status=1 WHERE order_id=:order_id");	
+			$query->bindValue(":order_id", $order_id);	
+			if($query->execute()){
+				return true;
+			}
+			return false;
+		}
+
+		public function cancelPaymentCustomerOrder($order_id)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET paid_status=0 WHERE order_id=:order_id");	
+			$query->bindValue(":order_id", $order_id);	
+			if($query->execute()){
+				return true;
+			}
+			return false;
+		}
+
+		public function singleOrder($customer_id, $orderId)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM customer_order WHERE customer_id=:customer_id AND order_id=:orderId");	
+			$query->bindValue(":customer_id", $customer_id);
+			$query->bindValue(":orderId", $orderId);	
+			$query->execute();
+			return $query->fetch();
+		}
+
+		public function sumSingleOrder($orderId)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT sum(weight_pro) as weight_cost FROM customer_order_details WHERE order_id=:orderId");	
+			$query->bindValue(":orderId", $orderId);	
+			$query->execute();
+			$lol=  $query->fetch();
+			return $now= $lol['weight_cost'];
+		}
+
 
 															
 	}

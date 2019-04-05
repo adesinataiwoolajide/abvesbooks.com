@@ -73,7 +73,6 @@
                                                     alt="Product"></a></td>
                                                     
                                                     <td class="cart_description"><p class="product-name"><a href="#"><?php echo ucwords($item['name']);?> </a></p>
-                                                        <small><a href="#">Weight : <?php echo $deed['weight_name'] ?></a></small>
                                                         
                                                     </td>
                                                     <td class="qty"><?php echo $quantity = $item['quantity']; ?>
@@ -122,12 +121,12 @@
                                     <dd class="complete">
                                         <address>
                                         Transaction ID: <?php echo $_SESSION['transactionId'];?><br>
-                                        Shipping Charges: &#8358;<?php echo number_format($shippingFee); ?><br>
+                                       
                                         Weight Charges: &#8358;<?php $jop =$weight_amount * $quantity; 
                                         $a = array_sum($wey); echo $a; ?><br>
                                         Sub Total: &#8358;<?php echo number_format(array_sum($total)+0) ?> <br>
-                                        Total: <?php $row = (array_sum($total)+$shippingFee);  ?>&#8358;<?php
-                                                            echo $a + $row;?><br>
+                                        Total: <?php $row = (array_sum($total)+ 0);  ?>&#8358;<?php
+                                            echo $a + $row;?><br>
                                         
                                         </address>
                                         </dd>

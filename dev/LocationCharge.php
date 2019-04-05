@@ -81,5 +81,53 @@
 			return $query->fetchAll(PDO::FETCH_ASSOC);
 		}
 
+		public function insertTheShipping($orderId, $customer_id, $status)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("INSERT INTO shipped_product(customer_id, order_number, status) VALUES (:customer_id, :orderId, :status)");
+            $query->bindValue(":orderId", $orderId);
+			$query->bindValue(":customer_id", $customer_id);
+			$query->bindValue(":status", $status);
+			if($query->execute()){
+				return true;
+			}else{
+                return false;
+            }
+			
+		}
+		
+		public function unshipTheOrder($orderId, $customer_id)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE shipped_product SET status=0 WHERE order_number=:orderId AND customer_id=:customer_id");
+            $query->bindValue(":orderId", $orderId);
+			$query->bindValue(":customer_id", $customer_id);
+			if($query->execute()){
+				return true;
+			}else{
+                return false;
+            }
+		}
+
+		public function confirmThePayment($orderId)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET paid_status=1 WHERE order_number=:orderId");
+            $query->bindValue(":orderId", $orderId);
+			if($query->execute()){
+				return true;
+			}else{
+                return false;
+            }
+		}
+		
+		public function getAllShipping()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM shipped_product WHERE status=1 ORDER BY time_shipped DESC");
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+        
 
     }

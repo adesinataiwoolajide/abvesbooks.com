@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 02, 2019 at 05:31 PM
+-- Generation Time: Apr 05, 2019 at 05:14 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -277,7 +277,63 @@ INSERT INTO `activity` (`act_id`, `action`, `user_details`, `time_added`) VALUES
 (235, 'Logged Out', 'tolajide74@gmail.com', '2019-04-02 11:56:53'),
 (236, 'Logged Out', 'tolajide74@gmail.com', '2019-04-02 14:19:46'),
 (237, 'Logged Out', 'tolajide74@gmail.com', '2019-04-02 14:24:46'),
-(238, 'Logged Out', 'tolajide74@gmail.com', '2019-04-02 15:12:25');
+(238, 'Logged Out', 'tolajide74@gmail.com', '2019-04-02 15:12:25'),
+(239, 'Logged Out', 'tolajide74@gmail.com', '2019-04-02 16:30:14'),
+(240, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:07:40'),
+(241, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:08:35'),
+(242, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:17:30'),
+(243, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:17:44'),
+(244, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:18:20'),
+(245, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:18:49'),
+(246, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:18:56'),
+(247, 'tolajide74@gmail.com Successfully Registered Account on the website', 'tolajide74@gmail.com', '2019-04-02 17:19:01'),
+(248, 'tolajide75@gmail.com Successfully Registered Account on the website', 'tolajide75@gmail.com', '2019-04-03 11:38:56'),
+(249, 'Logged In', 'tolajide74@gmail.com', '2019-04-03 11:40:45'),
+(250, 'Updated The Weight Details From 0.1 to 0.1', 'tolajide74@gmail.com', '2019-04-03 11:43:14'),
+(251, 'Logged Out', 'tolajide74@gmail.com', '2019-04-03 11:44:07'),
+(252, 'Logged Out', 'tolajide74@gmail.com', '2019-04-03 11:49:44'),
+(253, 'Logged In', 'tolajide74@gmail.com', '2019-04-04 14:16:14'),
+(254, 'Logged In', 'tolajide74@gmail.com', '2019-04-05 05:44:19'),
+(255, 'UnShipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 06:51:13'),
+(256, 'UnShipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 06:51:22'),
+(257, 'Shipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 06:51:34'),
+(258, 'UnShipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 06:52:48'),
+(259, 'Shipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 06:53:01'),
+(260, 'UnShipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 07:29:25'),
+(261, 'Shipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 07:29:37'),
+(262, 'UnShipped Order Number D05024F0ABFF02DA for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 09:50:39'),
+(263, 'Shipped Order Number 08BEC406EFE8C71E for 559DB10573', 'tolajide74@gmail.com', '2019-04-05 09:53:26'),
+(264, 'Shipped Order Number D24E98FC58EF695A for F349F21C7A', 'tolajide74@gmail.com', '2019-04-05 09:56:37'),
+(265, 'Shipped Order Number CA8398E698869A0A for 19022FEDFF', 'tolajide74@gmail.com', '2019-04-05 10:23:23'),
+(266, 'Cancel Payment of For Order 64E1E410012A72F5 For Customer', 'tolajide74@gmail.com', '2019-04-05 12:14:16'),
+(267, 'Cancel Payment of For Order 64E1E410012A72F5 For Customer', 'tolajide74@gmail.com', '2019-04-05 12:15:20'),
+(268, 'Cancel Payment of For Order D24E98FC58EF695A For Customer', 'tolajide74@gmail.com', '2019-04-05 12:16:23'),
+(269, 'Cancel Payment of For Order CA8398E698869A0A For Customer', 'tolajide74@gmail.com', '2019-04-05 12:17:10'),
+(270, 'Cancel Payment of For Order 64E1E410012A72F5 For Customer', 'tolajide74@gmail.com', '2019-04-05 12:17:44'),
+(271, 'Confirm Payment of 2619For Order 64E1E410012A72F5 For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:19:03'),
+(272, 'Confirm Payment of 2619For Order 64E1E410012A72F5 For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:19:46'),
+(273, 'Confirm Payment of 2619For Order 64E1E410012A72F5 For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:20:01'),
+(274, 'Confirm Payment of 74499For Order D24E98FC58EF695A For Customerkolade@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:20:37'),
+(275, 'Cancel Payment of 10500For Order CA8398E698869A0A For Customerolajide@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:21:00'),
+(276, 'Confirm Payment of  15200 For Order 3BE64D053456AF2D For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:22:11'),
+(277, 'Cancel Payment of  2For Order 3F33D5127548F84A For Customerkolade@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:24:08'),
+(278, 'Confirm Payment of  2619 For Order 64E1E410012A72F5 For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:29:05'),
+(279, 'Cancel Payment of  10500For Order CA8398E698869A0A For Customerolajide@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:29:12'),
+(280, 'Cancel Payment of  10500For Order CA8398E698869A0A For Customerolajide@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:29:12'),
+(281, 'Confirm Payment of  1010352 For Order 08BEC406EFE8C71E For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:29:22'),
+(282, 'Confirm Payment of  1010352 For Order 08BEC406EFE8C71E For Customertolaj[ide74@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:33:43'),
+(283, 'Confirm Payment of  10500 For Order CA8398E698869A0A For Customerolajide@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:35:06'),
+(284, 'Cancel Payment of  10500For Order CA8398E698869A0A For Customerolajide@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:35:21'),
+(285, 'Confirm Payment of  74499  For Order D24E98FC58EF695A By Customerkolade@gmail.com', 'tolajide74@gmail.com', '2019-04-05 12:36:17'),
+(286, 'Added fola@gmail.com Details to the User List', 'fola@gmail.com', '2019-04-05 13:53:09'),
+(287, 'Added tolajide740@gmail.com Details to the User List', 'tolajide740@gmail.com', '2019-04-05 14:03:38'),
+(288, 'Added folar@gmail.com Details to the User List', 'folar@gmail.com', '2019-04-05 14:19:08'),
+(289, 'Changed User E-amil From fola@gmail.com to folaa@gmail.com and Updated the password', 'folaa@gmail.com', '2019-04-05 14:19:53'),
+(290, 'Changed User E-amil From folar@gmail.com to foldr@gmail.com and Updated the password', 'foldr@gmail.com', '2019-04-05 14:20:55'),
+(291, 'Changed User E-amil From foldr@gmail.com to doyin@gmail.com and Updated the password', 'doyin@gmail.com', '2019-04-05 14:21:46'),
+(292, 'Changed User E-mail From folaa@gmail.com to fola@gmail.com and Updated the password', 'fola@gmail.com', '2019-04-05 14:22:33'),
+(293, 'Added tolajide75@gmail.com Details to the User List', 'tolajide75@gmail.com', '2019-04-05 14:23:19'),
+(294, 'Logged Out', 'tolajide74@gmail.com', '2019-04-05 15:12:24');
 
 -- --------------------------------------------------------
 
@@ -299,7 +355,10 @@ CREATE TABLE `admin_login` (
 --
 
 INSERT INTO `admin_login` (`user_id`, `full_name`, `user_name`, `password`, `access_level`, `time_registered`) VALUES
-(1, 'Adesina Taiwo Olajumoke', 'tolajide74@gmail.com', 'b63e58a251cbdb2678919dbcd79fdc519c927304', 1, '2018-12-12 08:35:35');
+(1, 'Adesina Taiwo Olajumoke', 'tolajide74@gmail.com', 'b63e58a251cbdb2678919dbcd79fdc519c927304', 1, '2018-12-12 08:35:35'),
+(2, 'Fola', 'fola@gmail.com', '7df6ceb3c5170913edf3d79f3faa1773a393f3a9', 1, '2019-04-05 14:22:33'),
+(4, 'Doyinsola', 'doyin@gmail.com', 'b8d0c9eb95d02827d16a30de923577ef51d4d978', 1, '2019-04-05 14:21:46'),
+(5, 'Adesina Taiwo Olajide', 'tolajide75@gmail.com', 'b63e58a251cbdb2678919dbcd79fdc519c927304', 1, '2019-04-05 14:23:19');
 
 -- --------------------------------------------------------
 
@@ -340,6 +399,8 @@ CREATE TABLE `customer_order` (
   `shipping_charge` varchar(20) DEFAULT NULL,
   `amount` varchar(255) DEFAULT NULL,
   `weight_amount` varchar(255) NOT NULL,
+  `shipping` int(2) NOT NULL,
+  `delivery` int(2) NOT NULL,
   `time_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -347,15 +408,18 @@ CREATE TABLE `customer_order` (
 -- Dumping data for table `customer_order`
 --
 
-INSERT INTO `customer_order` (`id`, `customer_id`, `order_id`, `paystack_reference`, `paid_status`, `order_status`, `subtotal`, `shipping_charge`, `amount`, `weight_amount`, `time_created`) VALUES
-(12, 'F349F21C7A', '3F33D5127548F84A', 'c536b610f966852b124d', 0, 0, '1', '1', '2', '', '2019-03-22 17:26:44'),
-(14, '19022FEDFF', 'CA8398E698869A0A', '0c80b6e99fa914850243', 0, 0, '8000', '2500', '10500', '', '2019-03-22 21:31:31'),
-(16, '559DB10573', '0472B9CD9B76FFEA', 'daf941f65ae63f0bc7ef', 1, 0, '2', '1', '4', 'macmillian-biology-68860991', '2019-04-02 11:19:38'),
-(17, '559DB10573', '3E47EA3F2744D9DF', '0f748e062d4c5a253edd', 1, 0, '2', '1', '4', 'macmillian-biology-68860991', '2019-04-02 11:38:04'),
-(18, '559DB10573', 'CAAB66BA190A03D2', 'a1740b12e8c0a1be7ddf', 1, 0, '42809', '1', '54136', 'permanent-marker-63559201', '2019-04-02 11:56:06'),
-(19, '559DB10573', 'D05024F0ABFF02DA', 'f47ae4aa1cdcd0e8d6c7', 1, 1, '105009', '1', '116091', 'casio-calculator-83942001', '2019-04-02 14:19:06'),
-(20, '559DB10573', '08BEC406EFE8C71E', '914a75ed9f86fafcbb29', 1, 1, '1000201', '1', '1010352', 'white-board-marker-13551200', '2019-04-02 14:22:36'),
-(21, '559DB10573', '63C5222BC45C5E9C', '16e5326de782d7de94b8', 1, 1, '34009', '1', '36819', 'scientific-ruller-50322120', '2019-04-02 15:12:07');
+INSERT INTO `customer_order` (`id`, `customer_id`, `order_id`, `paystack_reference`, `paid_status`, `order_status`, `subtotal`, `shipping_charge`, `amount`, `weight_amount`, `shipping`, `delivery`, `time_created`) VALUES
+(12, 'F349F21C7A', '3F33D5127548F84A', 'c536b610f966852b124d', 0, 1, '1', '1', '2', '', 0, 0, '2019-04-05 12:32:43'),
+(14, '19022FEDFF', 'CA8398E698869A0A', '0c80b6e99fa914850243', 0, 1, '8000', '2500', '10500', '', 1, 0, '2019-04-05 12:35:21'),
+(16, '559DB10573', '0472B9CD9B76FFEA', 'daf941f65ae63f0bc7ef', 0, 1, '2', '1', '4', 'macmillian-biology-68860991', 0, 0, '2019-04-05 12:33:01'),
+(17, '559DB10573', '3E47EA3F2744D9DF', '0f748e062d4c5a253edd', 0, 1, '2', '1', '4', 'macmillian-biology-68860991', 0, 0, '2019-04-05 12:32:13'),
+(18, '559DB10573', 'CAAB66BA190A03D2', 'a1740b12e8c0a1be7ddf', 0, 1, '42809', '1', '54136', 'permanent-marker-63559201', 0, 0, '2019-04-05 12:32:24'),
+(19, '559DB10573', 'D05024F0ABFF02DA', 'f47ae4aa1cdcd0e8d6c7', 0, 1, '105009', '1', '116091', 'casio-calculator-83942001', 0, 0, '2019-04-05 12:32:56'),
+(20, '559DB10573', '08BEC406EFE8C71E', '914a75ed9f86fafcbb29', 1, 1, '1000201', '1', '1010352', 'white-board-marker-13551200', 1, 0, '2019-04-05 12:33:43'),
+(21, '559DB10573', '63C5222BC45C5E9C', '16e5326de782d7de94b8', 0, 0, '34009', '1', '36819', 'scientific-ruller-50322120', 0, 0, '2019-04-05 12:32:04'),
+(23, '559DB10573', '64E1E410012A72F5', '5c082108fc3240aa696d', 0, 1, '1809', '1', '2619', 'casio-calculator-83942001', 0, 0, '2019-04-05 12:33:12'),
+(24, 'F349F21C7A', 'D24E98FC58EF695A', '40359d3a4ea21e065e20', 1, 1, '55909', '10000', '74499', 'white-board-marker-13551200', 1, 0, '2019-04-05 12:36:17'),
+(26, '559DB10573', '3BE64D053456AF2D', '972b3accfaa985f27999', 0, 1, '5100', '10000', '15200', 'white-board-marker-13551200', 0, 0, '2019-04-05 12:30:08');
 
 -- --------------------------------------------------------
 
@@ -377,8 +441,8 @@ CREATE TABLE `customer_order_details` (
 --
 
 INSERT INTO `customer_order_details` (`id`, `order_id`, `product_id`, `quantity`, `weight_pro`, `amount`) VALUES
-(43, '3F33D5127548F84A', 'macmillian-biology-68860991', ' 1', '', 1),
-(46, 'CA8398E698869A0A', 'white-board-marker-13551200', ' 1', '', 5000),
+(43, '3F33D5127548F84A', 'macmillian-biology-68860991', ' 1', '20', 1),
+(46, 'CA8398E698869A0A', 'white-board-marker-13551200', ' 1', '50', 5000),
 (47, 'CA8398E698869A0A', 'permanent-marker-63559201', ' 1', '', 3000),
 (49, '0472B9CD9B76FFEA', 'macmillian-biology-68860991', ' 1', '', 1),
 (50, '3E47EA3F2744D9DF', 'macmillian-biology-68860991', ' 1', '', 1),
@@ -388,7 +452,11 @@ INSERT INTO `customer_order_details` (`id`, `order_id`, `product_id`, `quantity`
 (54, '08BEC406EFE8C71E', 'helix-mathematical-set-61759012', ' 50', '150', 5000),
 (55, '08BEC406EFE8C71E', 'white-board-marker-13551200', ' 150', '150', 5000),
 (56, '63C5222BC45C5E9C', 'permanent-marker-63559201', ' 1', '2000', 3000),
-(57, '63C5222BC45C5E9C', 'scientific-ruller-50322120', ' 10', '2000', 3000);
+(57, '63C5222BC45C5E9C', 'scientific-ruller-50322120', ' 10', '2000', 3000),
+(59, '64E1E410012A72F5', 'casio-calculator-83942001', ' 1', '809', 1000),
+(60, 'D24E98FC58EF695A', 'permanent-marker-63559201', ' 10', '500', 3000),
+(61, 'D24E98FC58EF695A', 'white-board-marker-13551200', ' 5', '500', 5000),
+(63, '3BE64D053456AF2D', 'white-board-marker-13551200', ' 1', '100', 5000);
 
 -- --------------------------------------------------------
 
@@ -402,6 +470,7 @@ CREATE TABLE `customer_registration` (
   `user_name` varchar(255) NOT NULL,
   `password` text NOT NULL,
   `reg_number` varchar(255) NOT NULL,
+  `status` int(1) NOT NULL,
   `time_addes` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -409,15 +478,16 @@ CREATE TABLE `customer_registration` (
 -- Dumping data for table `customer_registration`
 --
 
-INSERT INTO `customer_registration` (`registration_id`, `full_name`, `user_name`, `password`, `reg_number`, `time_addes`) VALUES
-(1, 'Goke Olamide', 'kolade@gmail.com', '2be1b1ba7267672671282cd782d7dde38f2c9e7a', 'F349F21C7A', '2019-03-22 10:10:36'),
-(2, 'Olajide', 'olajide@gmail.com', 'a3b1b77d41323af5704bfc2c34282dd9b40e5fdc', '19022FEDFF', '2019-03-22 21:29:10'),
-(3, 'Tobi', 'tobi@gmail.com', 'c219c4dc4b7ff6be7a7090459bc6d06a879a1577', '2F8126A297', '2019-03-25 10:33:47'),
-(4, 'Taiwo Fola', 'taiwo@gmail.com', '0eba7922f38e00fe4bdcf47138eddb7347248730', '5322F22BF0', '2019-03-26 06:28:59'),
-(5, 'Adedeji Omobosola', 'bosola@gmail.com', '07729e981677289f422cdfd8d5b2a69882ff9bfd', 'A3D35509E0', '2019-03-31 20:12:36'),
-(6, 'Mrs Nancy Woods', 'woods@gmail.com', '61732525e4126559fef15ccac2f05bdfa7bc66df', 'F139165552', '2019-03-31 20:25:52'),
-(7, 'Adesina Kolade', 'tolajide74@gmail.com', 'b63e58a251cbdb2678919dbcd79fdc519c927304', '559DB10573', '2019-03-31 20:42:21'),
-(8, 'Testing', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'A16995E120', '2019-04-01 06:53:04');
+INSERT INTO `customer_registration` (`registration_id`, `full_name`, `user_name`, `password`, `reg_number`, `status`, `time_addes`) VALUES
+(1, 'Goke Olamide', 'kolade@gmail.com', '2be1b1ba7267672671282cd782d7dde38f2c9e7a', 'F349F21C7A', 0, '2019-03-22 10:10:36'),
+(2, 'Olajide', 'olajide@gmail.com', 'a3b1b77d41323af5704bfc2c34282dd9b40e5fdc', '19022FEDFF', 0, '2019-03-22 21:29:10'),
+(3, 'Tobi', 'tobi@gmail.com', 'c219c4dc4b7ff6be7a7090459bc6d06a879a1577', '2F8126A297', 0, '2019-03-25 10:33:47'),
+(4, 'Taiwo Fola', 'taiwo@gmail.com', '0eba7922f38e00fe4bdcf47138eddb7347248730', '5322F22BF0', 0, '2019-03-26 06:28:59'),
+(5, 'Adedeji Omobosola', 'bosola@gmail.com', '07729e981677289f422cdfd8d5b2a69882ff9bfd', 'A3D35509E0', 0, '2019-03-31 20:12:36'),
+(6, 'Mrs Nancy Woods', 'woods@gmail.com', '61732525e4126559fef15ccac2f05bdfa7bc66df', 'F139165552', 0, '2019-03-31 20:25:52'),
+(7, 'Adesina Kolade', 'tolajide74@gmail.com', 'b63e58a251cbdb2678919dbcd79fdc519c927304', 'F349F21C7A', 0, '2019-04-04 15:30:42'),
+(8, 'Testing', 'test@gmail.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'A16995E120', 0, '2019-04-01 06:53:04'),
+(9, 'Testing Email', 'tolaj[ide74@gmail.com', 'b63e58a251cbdb2678919dbcd79fdc519c927304', '559DB10573', 0, '2019-04-05 06:19:14');
 
 -- --------------------------------------------------------
 
@@ -570,10 +640,10 @@ CREATE TABLE `product_stock` (
 INSERT INTO `product_stock` (`stock_id`, `product_name`, `category_id`, `genre_id`, `quantity`, `publisher_id`, `edition`, `time_added`) VALUES
 (1, 'MACMILLIAN BIOLOGY', 1, 10, 20, 6, 'First Edition', '2019-03-18 15:48:45'),
 (2, 'HELIX MATHEMATICAL SET', 2, 12, 1, 7, 'Null', '2019-04-02 14:22:34'),
-(3, 'CASIO CALCULATOR', 2, 12, 1, 7, 'Null', '2019-04-02 14:19:02'),
-(4, 'WHITE BOARD MARKER', 1, 12, 150, 9, 'Null', '2019-04-02 14:22:34'),
+(3, 'CASIO CALCULATOR', 2, 12, -1, 7, 'Null', '2019-04-02 16:29:58'),
+(4, 'WHITE BOARD MARKER', 1, 12, 143, 9, 'Null', '2019-04-03 12:25:54'),
 (5, 'SCIENTIFIC RULLER', 1, 12, 10, 8, 'Null', '2019-04-02 15:12:05'),
-(6, 'PERMANENT MARKER', 2, 12, 19, 8, 'Null', '2019-04-02 15:12:05'),
+(6, 'PERMANENT MARKER', 2, 12, 9, 8, 'Null', '2019-04-03 11:49:21'),
 (17, 'SCHOOL EXTRA', 1, 45, 33, 6, 'Third Edition', '2019-03-28 23:01:35'),
 (18, 'SCHOOL EXTRA', 1, 45, 33, 6, 'Third Edition', '2019-03-28 23:01:35'),
 (19, 'SCHOOL EXTRA', 1, 45, 33, 6, 'Third Edition', '2019-03-28 23:01:35'),
@@ -622,8 +692,8 @@ CREATE TABLE `product_weight` (
 --
 
 INSERT INTO `product_weight` (`weight_id`, `weight_name`, `amount`, `time_added`) VALUES
-(2, '3.1', 1, '2019-04-02 11:01:14'),
-(3, '0.1', 200, '2019-03-28 21:29:48'),
+(2, '3.1', 100, '2019-04-03 11:46:43'),
+(3, '0.1', 1000, '2019-04-03 11:43:14'),
 (4, '1.1', 809, '2019-03-28 21:59:05');
 
 -- --------------------------------------------------------
@@ -648,6 +718,30 @@ INSERT INTO `publishers` (`publisher_id`, `publisher_name`, `publisher_logo`, `c
 (7, 'Atlantic Books', 'allantic.png', '2019-03-14 11:53:42'),
 (8, 'Harper Collins', 'harpercolins.png', '2019-03-14 11:54:19'),
 (9, 'Walker Books', 'walker.png', '2019-03-14 11:55:02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shipped_product`
+--
+
+CREATE TABLE `shipped_product` (
+  `shipping_id` int(255) NOT NULL,
+  `customer_id` varchar(255) NOT NULL,
+  `order_number` varchar(255) NOT NULL,
+  `status` int(1) NOT NULL,
+  `time_shipped` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `shipped_product`
+--
+
+INSERT INTO `shipped_product` (`shipping_id`, `customer_id`, `order_number`, `status`, `time_shipped`) VALUES
+(1, '559DB10573', 'D05024F0ABFF02DA', 0, '2019-04-05 09:50:37'),
+(2, '559DB10573', '08BEC406EFE8C71E', 1, '2019-04-05 09:53:25'),
+(3, 'F349F21C7A', 'D24E98FC58EF695A', 1, '2019-04-05 09:56:36'),
+(4, '19022FEDFF', 'CA8398E698869A0A', 1, '2019-04-05 10:23:23');
 
 -- --------------------------------------------------------
 
@@ -693,7 +787,7 @@ CREATE TABLE `shipping_location_charge` (
 --
 
 INSERT INTO `shipping_location_charge` (`id`, `location`, `charge`) VALUES
-(1, 'Lagos', 1),
+(1, 'Lagos', 10000),
 (2, 'Ogun', 1500),
 (3, 'Osun', 1500),
 (4, 'Ondo', 1500),
@@ -849,6 +943,12 @@ ALTER TABLE `publishers`
   ADD PRIMARY KEY (`publisher_id`);
 
 --
+-- Indexes for table `shipped_product`
+--
+ALTER TABLE `shipped_product`
+  ADD PRIMARY KEY (`shipping_id`);
+
+--
 -- Indexes for table `shipping_address`
 --
 ALTER TABLE `shipping_address`
@@ -874,13 +974,13 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `act_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
+  MODIFY `act_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=295;
 
 --
 -- AUTO_INCREMENT for table `admin_login`
 --
 ALTER TABLE `admin_login`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `authors`
@@ -892,19 +992,19 @@ ALTER TABLE `authors`
 -- AUTO_INCREMENT for table `customer_order`
 --
 ALTER TABLE `customer_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `customer_order_details`
 --
 ALTER TABLE `customer_order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT for table `customer_registration`
 --
 ALTER TABLE `customer_registration`
-  MODIFY `registration_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `registration_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `genre`
@@ -953,6 +1053,12 @@ ALTER TABLE `product_weight`
 --
 ALTER TABLE `publishers`
   MODIFY `publisher_id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `shipped_product`
+--
+ALTER TABLE `shipped_product`
+  MODIFY `shipping_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `shipping_address`

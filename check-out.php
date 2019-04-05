@@ -65,12 +65,12 @@
                                                 <td><?php echo $_SESSION['transactionId'];?></td>
                                             <tr>
                                         </tbody>
-                                        <tbody>
+                                        <!-- <tbody>
                                             <tr>
                                                 <td>Shipping Charges</td>
                                                 <td>&#8358;<?php echo number_format($shippingFee); ?></td>
                                             <tr>
-                                        </tbody>
+                                        </tbody> -->
                                         <tbody>
                                             <tr>
                                                 <td>Weight Charges</td>
@@ -87,7 +87,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>Total Charges</td>
-                                                <td><?php $row = (array_sum($total)+$shippingFee);  ?>&#8358;<?php
+                                                <td><?php $row = (array_sum($total)+0);  ?>&#8358;<?php
                                                 echo $a + $row;?></td>
                                             <tr>
                                         </tbody>
@@ -97,10 +97,10 @@
                             
                                 <form action="handlers/orders/saveOrder.php" method="post" id="self">
                                     <script src='https://js.paystack.co/v1/inline.js'></script>
-                                    <input type="hidden" name="total" value="<?php echo $over = array_sum($total)+$shippingFee + $a; ?>"  >
+                                    <input type="hidden" name="total" value="<?php echo $over = array_sum($total) + $a; ?>"  >
                                     <input type="hidden" name="subtotal" value="<?php echo array_sum($total)+0 ?>"  >
                                     <input type="hidden" name="shipping_charge" id="shipping" value="<?php echo $shippingFee; ?>">
-                                    <input type="text" name="weight_amount" id="shipping" value="<?php echo array_sum($wey); ?>">
+                                    <input type="hidden" name="weight_amount" id="shipping" value="<?php echo array_sum($wey); ?>">
                                     <input type="hidden" name="email" id="email" value="<?php echo $_SESSION['user_name']; ?>">
                                     <input type="hidden" name="weight_pro" id="shipping" value="<?php echo $weight_amount * $quantity?>">
                                     

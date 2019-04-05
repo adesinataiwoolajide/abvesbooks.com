@@ -21,60 +21,6 @@
 			}
 		}
 
-		public function checkDoublePassport($file_name){
-			try{
-				$checkPass = $this->db->prepare("SELECT * FROM passports WHERE passport_url=:file_name");
-				$arrChc = array(':file_name'=>$file_name);
-				$checkPass->execute($arrChc);
-				if($checkPass->rowCount()>0){
-					return true;
-				}else{
-					return false;
-				}
-			}catch(PDOException $e){
-				$_SESSION['error'] = $e->getMessage();
-				return false;
-			}
-		}
-
-		public function addingUserPassport($eemail, $file_name){
-			try{
-				$insert = $this->db->prepare("INSERT INTO passports(email, passport_url)VALUES(:eemail, :file_name)");
-				$arr = array(':eemail'=>$eemail, ':file_name'=>$file_name);
-				$result = $insert->execute($arr);
-				if($result){
-					return true;
-				}else{
-					return false;
-				}
-			}catch(PDOException $e){
-				echo $e->getMessage();
-				return false;
-			}
-		}
-
-		public function gettingRole($access){
-			if($access ==1){ ?>
-				<p style="color: green"> Admin </p><?php
-			}else{ ?>
-				<p style="color: red"> Not yet an Admin </p><?php
-			}
-		}
-
-		public function gettingUserImages($users){
-			try{
-				$sel = $this->db->prepare("SELECT * FROM passports 	WHERE email=:users");
-				$arr = array(':users'=>$users);
-				$sel->execute($arr);
-				$dev = $sel->fetch();
-				return $dev;
-				
-			}catch(PDOException $e){
-				echo $e->getMessage();
-				return false;
-			}
-
-		}
 		
 		public function checkingUserExistence($users){
 			try{
@@ -91,26 +37,24 @@
 			}
 		}
 
-		public function gettingUserDetails($users){
+
+		public function viewAllUsers(){
 			try{
-				$geting = $this->db->prepare("SELECT * FROM admin_login WHERE user_name =:users");
-				$arr = array(':users'=>$users);
-				$geting->execute($arr);
-				$see = $geting->fetch();
-				return $see;
+				$real = $this->db->prepare("SELECT * FROM admin_login ORDER BY time_registered");
+				$real->execute();
+				return $real->fetchAll(PDO::FETCH_ASSOC);
 			}catch(PDOException $e){
-				echo $e->getMessage();
-				return false;
+				$_SESSION['error'] = $e->getMessage();
 			}
 		}
 
-		public function gettingPassportDetails($users){
+		public function gettingUserDetails($user_name){
 			try{
-				$getting = $this->db->prepare("SELECT * FROM passports WHERE email =:users");
-				$arr = array(':users'=>$users);
-				$getting->execute($arr);
-				$dee = $getting->fetch();
-				return $dee;
+				$geting = $this->db->prepare("SELECT * FROM admin_login WHERE user_name =:user_name");
+				$arr = array(':user_name'=>$user_name);
+				$geting->execute($arr);
+				$see = $geting->fetch();
+				return $see;
 			}catch(PDOException $e){
 				echo $e->getMessage();
 				return false;
@@ -134,10 +78,10 @@
 			}
 		}
 
-		public function updateUserThedetails($user_id, $full_name){
+		public function updateUserThedetails($user_id, $full_name, $eemail, $access){
 			try{
-				$update = $this->db->prepare("UPDATE admin_login SET full_name=:full_name WHERE user_id=:user_id");
-				$arr = array(':full_name'=>$full_name, ':user_id'=>$user_id);
+				$update = $this->db->prepare("UPDATE admin_login SET full_name=:full_name, user_name=:eemail, access_level=:access WHERE user_id=:user_id");
+				$arr = array(':full_name'=>$full_name, ':eemail'=>$eemail, ':access'=>$access, ':user_id'=>$user_id);
 				$result = $update->execute($arr);
 				if(!empty($result)){
 					return true;
@@ -167,20 +111,6 @@
 			}
 		}
 
-		
-		public function seeAccess($eemail){
-			try{
-				$check = $this->db->prepare("SELECT * FROM admin_login WHERE user_name =:eemail");
-				$arr = array(':eemail'=>$eemail);
-				$check->execute($arr);
-				$see = $check->fetch();
-				return $see;
-			}catch(PDOException $e){
-				$_SESSION['error'] = $e->getMessage();
-				return false;
-			}
-		}
-
 		public function forgetPassword($email){
 			try{
 				$select = $this->db->prepare("SELECT * FROM admin_login WHERE user_name=:email");
@@ -200,10 +130,10 @@
 			}
 		}
 
-		public function deleteAdminDetails($staff_email){
+		public function deleteAdminDetails($user_name){
 			try{
-				$delete = $this->db->prepare("DELETE FROM admin_login WHERE user_name=:staff_email");
-				$aro = array(':staff_email'=>$staff_email);
+				$delete = $this->db->prepare("DELETE FROM admin_login WHERE user_name=:user_name");
+				$aro = array(':user_name'=>$user_name);
 				if(!empty($delete->execute($aro))){
 					return true;
 				}else{

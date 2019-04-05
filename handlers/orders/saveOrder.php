@@ -50,7 +50,10 @@ if(!isset($_SESSION['id'])){ ?>
 
         //live secret key = sk_live_bebb5ccba02a9200ff12f3544c8e23621e606431
         //live publick key = pk_live_bca47aeb1428068a1d0ae730e9f7067b6eea7ab6
-        $paystack = new Yabacon\Paystack('sk_test_3ab911f611cb52cd9ac47d872263f96536b6cb2b');
+
+        //abves test code    sk_test_e512d5d30aa7db1a194069474fa3bf8d60a34034
+        
+        $paystack = new Yabacon\Paystack('sk_test_e512d5d30aa7db1a194069474fa3bf8d60a34034');
         try
         {
           $tranx = $paystack->transaction->initialize([
@@ -62,9 +65,19 @@ if(!isset($_SESSION['id'])){ ?>
             $_SESSION['error'] = "Unable to proceed with the transaction. Please try again";
             $all_purpose->redirect("../../check-out.php");        
         }
-        $customer_id = $_SESSION['reg_number'];
-        $order->updateOrderWithPaystackReference($_SESSION['transactionId'], $tranx->data->reference);
-        $order->updateOrderPaymentStatus($customer_id);
+
+        if('success' === $tranx->data->status) {
+            $customer_id = $_SESSION['reg_number'];
+            $order->updateOrderWithPaystackReference($_SESSION['transactionId'], $tranx->data->reference);
+            $order->updateOrderPaymentStatus($customer_id);
+            $order->updateOrderWithPaystackReference($_SESSION['transactionId'], $tranx->data->reference);
+            //send user receipt to email
+            Email::sendUserPaymentReceipt($_SESSION['email'], $_SESSION['name'], $_SESSION['transactionId'], 
+            number_format($_SESSION['orderAmount']));
+            //notify admin of order
+            Email::sendAdminOrderNotificationEmail($_SESSION['transactionId'], $_SESSION['reg_number']);
+        }
+
         header('Location: ' . $tranx->data->authorization_url);    
     }else{
         $_SESSION['error'] = "Unable to proceed with the transaction. Please try again";
