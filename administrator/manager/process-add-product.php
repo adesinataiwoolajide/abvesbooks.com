@@ -50,7 +50,7 @@ try{
             $move= move_uploaded_file($file_tmp, $dir.$file_name);
             $image = $file_name;
 
-           if($product->createProduct($product_name, $slug, $image, $genre_id, $category_id, $amount, $quantity, $description, 
+            if($product->createProduct($product_name, $slug, $image, $genre_id, $category_id, $amount, $quantity, $description, 
                $edition, $publisher_id, $weight_id, $author_id)){
 
                 if($product->checkDuplicateProductStock($product_name, $category_id, $genre_id, $publisher_id, $edition)){

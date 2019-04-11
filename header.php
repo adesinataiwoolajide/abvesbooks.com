@@ -17,6 +17,7 @@
     $ship = new Shipping;
     $location = new LocationCharge;
     $weight = new Weight;
+    $order = new Order;
 
 	if(!isset($_SESSION['transactionId'])){
         $_SESSION['transactionId'] = $all_purpose->generateRandomHash(16);   
@@ -78,34 +79,31 @@
                         <div class="row">
                             <div class="col-sm-4 col-md-4 col-xs-12"> 
                                 <!-- Default Welcome Message -->
-                                <div class="welcome-msg hidden-xs hidden-sm">Default welcome msg! </div>
+                                <div class="welcome-msg hidden-xs hidden-sm"><?php
+                                    if(!isset($_SESSION['id'])){ ?>
+                                        Welcome to Abves Books! <?php
+                                    }else{
+                                        echo $_SESSION['name']. ' Welcome To Abves Books';
+                                    } ?>
+                                </div>
                                 
                             </div>
                         
                             <!-- top links -->
                             <div class="headerlinkmenu col-md-8 col-sm-8 col-xs-12"> <span class="phone  hidden-xs hidden-sm">Call Us: +123.456.789</span>
-                                <ul class="links">
-                                    <li class="hidden-xs"><a title="Help Center" href="#"><span>Help Center</span></a></li>
-                                    <li><a title="Store Locator" href="#"><span>Store Locator</span></a></li>
-                                    <li><a title="Checkout" href="checkout.html"><span>Checkout</span></a></li>
-                                    <li>
-                                        <div class="dropdown"><a class="current-open" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span>My Account</span> <i class="fa fa-angle-down"></i></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="account_page.html">Account</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="orders_list.html">Order Tracking</a></li>
-                                                <li><a href="about_us.html">About us</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="login.php">Log In</a></li>
-                                                <li><a href="register_page.html">Register</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    ><?php 
+                                <ul class="links"><?php 
 								    if(!isset($_SESSION['id'])){ ?>
-                                        <li><a title="login" href="login.php"><span>Login</span></a></li><?php 
+                                        <li><a href="shop.php">Shop</a></li>
+                                        <li><a href="">About us</a></li>
+                                        <li class="hidden-xs"><a title="Help Center" href=""><span>Help Center</span></a></li>
+                                        <li><a title="Store Locator" href=""><span>Store Locator</span></a></li>
+                                        <li><a title="login" href="login.php"><span>Login</span></a></li>
+                                        <li><a title="login" href="login.php"><span>Register</span></a></li><?php 
                                     }else{ ?>
-                                        <li><a title="logout.php" href="login.php"><span>Logout</span></a></li><?php
+                                        <li><a href="">Contact us</a></li>
+                                        <li><a href="my_orders.php?registration_number=<?php echo $_SESSION['reg_number'] ?>">Order Tracking</a></li>
+                                        <li><a title="Checkout" href="check-out.php"><span>Checkout</span></a></li>
+                                        <li><a title="Log Out" href="logout.php"><span>Logout</span></a></li><?php
                                     } ?>
                                 </ul>
                             </div>
@@ -153,17 +151,28 @@
                                     $seeComp = $register->gettingComparedLimit($reg_number); ?>
                                 
                                     <div class="link-wishlist" style="margin-left: 0px"> 
-                                        <a href="wishlist.php">
+                                        <a href="wishlist.php?reg_number=<?php echo $reg_number ?>&&action=<?php echo 'Wishlist' ?>">
                                             <i class="icon-heart icons"><sup style="color: red">
                                             <?php if($wish >0){ echo $wish; } else{ echo 0; } ?></sup></i><span> Wishlist </span>
                                         </a> 
                                     </div>
-                                    <div class="link-wishlist" style="margin-left: 5px"> <a href="compare.php">
+                                    <div class="link-wishlist" style="margin-left: 5px"> 
+                                    <a href="compare.php?reg_number=<?php echo $reg_number ?>&&action=<?php echo 'Compare' ?>">
                                         <i class="fa fa-area-chart"><sup style="color: red">
                                         <?php if($comp >0){ echo $comp; } else{ echo 0; } ?></sup></i><span> Compare</span></a> 
                                     </div>
                                     <div class="top-cart-contain"><?php 
-                                        if(isset($_SESSION['cart'])){?>
+                                        if(isset($_SESSION['cart'])){
+                                            $cart = $_SESSION['cart'];
+                                            $count = count($cart);
+                                            $reg_number = $_SESSION['reg_number'];
+                                            $shipLocation = $register->getShippinCusgAddress($reg_number); 
+                                            $state = $shipLocation['state']; 
+                                            $shipAmount = $register->getShippinLocationMoney($state); 
+                                            $shippingFee = $shipAmount['charge']; 
+                                            $total = array();
+                                            $wey = array();
+                                            ?>
                                             <div class="mini-cart">
                                                 <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> 
                                                     <a href="shopping-cart.php">
@@ -176,18 +185,33 @@
                                             <div>
                                             <div class="top-cart-content">
                                                 <div class="block-subtitle hidden">Recently added items</div>
-                                                    <ul id="cart-sidebar" class="mini-products-list">
-                                                        <li class="item odd"> <a href="shopping-cart.php" title="Product title here" 
-                                                            class="product-image"><img src="images/product-9.jpg" alt="html Template" width="65">
+                                                    <ul id="cart-sidebar" class="mini-products-list"><?php
+                                                        foreach($_SESSION['cart'] as $item){
+                                                            $slug = $item['slug'];
+                                                            $details = $product->getSingleProduct($slug); 
+                                                            $weight_id = $details['weight_id'];
+                                                            
+                                                            $deed = $weight->getSingleBookWeight($weight_id);
+                                                            $weight_amount = $deed['amount'];
+                                                            $cal = $item['amount'] * $item['quantity'] + $deed['amount'];
+                                                            $foo = $item['quantity'] * $deed['amount'];
+                                                            array_push($wey, $foo);
+                                                            array_push($total, $cal);
+                                                        } ?>
+                                                        <li class="item"> <a href="shopping-cart.php" title="Product title here" 
+                                                            class="product-image"><img src="<?php echo "assets/images/product/".$details['image'] ?>"
+                                                             alt="html Template" width="65">
                                                             </a>
-                                                            <div class="product-details"> <a href="#" title="Remove This Item" class="remove-cart"><i class="pe-7s-trash"></i></a>
-                                                                <p class="product-name"><a href="shopping-cart.php">Lorem ipsum dolor sit amet Consectetur</a> </p>
-                                                                <strong>1</strong> x <span class="price">$20.00</span> 
+                                                            <div class="product-details"> <a href="handlers/cart/removeFromCart.php?slug=<?php echo $item['slug'];?>" 
+                                                                title="Remove This Item" class="remove-cart"><i class="pe-7s-trash"></i></a>
+                                                                <p class="product-name"><a href="shopping-cart.php"><?php echo ucwords($item['name']);?></a> </p>
+                                                                <strong><?php echo $quantity = $item['quantity']; ?></strong> x <span class="price">
+                                                                <?php  echo "&#8358;".number_format($item['amount'] * $quantity + $weight_amount);?></span> 
                                                             </div>
                                                         </li>
                                                         
                                                     </ul>
-                                                    <div class="top-subtotal">Subtotal: <span class="price">$520.00</span></div>
+                                                    <div class="top-subtotal">Subtotal: <span class="price">&#8358;<?php echo number_format(array_sum($total)+0) ?></span></div>
                                                         <div class="actions">
                                                             <button class="btn-checkout" type="button" onClick="location.href='check-out.php'">
                                                             <i class="fa fa-check"></i><span>Checkout</span></button>
@@ -220,14 +244,16 @@
                                         0</sup></i><span> Compare</span></a> 
                                     </div>
                                     <div class="top-cart-contain"><?php 
-                                        if(isset($_SESSION['cart'])){?>
+                                        if(isset($_SESSION['cart'])){ 
+                                            ?>
                                             <div class="mini-cart">
                                                 <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle" onclick="location.href='shopping-cart.php'"> 
                                                     <a href="shopping-cart.php">
                                                         <div class="cart-icon"><i class="icon-basket-loaded icons"></i>
                                                         <span class="cart-total">
                                                         <?php echo count($_SESSION['cart']); ?></span></div>
-                                                        <div class="shoppingcart-inner hidden-xs"><span class="cart-title">Cart</span> </div>
+                                                        <div class="shoppingcart-inner hidden-xs"><span class="cart-title">
+                                                        Cart</span> </div>
                                                     </a>
                                                 </div>
                                             <div><?php 
@@ -243,7 +269,7 @@
                                                 </div>
                                             <div><?php
                                         } ?>
-                                    </div<?php
+                                    </div><?php
                                     
                                 } ?>
                             </div>

@@ -16,7 +16,8 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">Home</a></li>
                     <li class="breadcrumb-item"><a href="add-product.php">Add Product</a></li>
-                    <li class="breadcrumb-item"><a href="view-products.php">View Products</a></li>
+                    <li class="breadcrumb-item"><a href="upload_products.php">Upload Products</a></li>
+					<li class="breadcrumb-item"><a href="view-products.php">View Products</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Adding New Product</li>
                 </ol>
             </div>

@@ -140,7 +140,7 @@ $register = new newCustomerRegistration($db);
                     </ul>
                 </li>
             
-                <li><a href="users.php" class="waves-effect"><i class="fa fa-users text-success"></i> <span>Users</span></a></li>
+                <li><a href="user.php" class="waves-effect"><i class="fa fa-users text-success"></i> <span>Users</span></a></li>
     
                 <li><a href="activities_log.php" class="waves-effect"><i class="fa fa-cloud text-danger"></i> <span>Activity Log</span></a></li>
 

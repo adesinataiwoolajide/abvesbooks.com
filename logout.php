@@ -12,6 +12,7 @@
 		$_SESSION['success'] = $email. " ". "You have logged out successfully";
 		
 		unset($email);
+		//unset($_SESSION['cart']);
 		//destroying the session
 		session_destroy();
 		//redirecting to the index page

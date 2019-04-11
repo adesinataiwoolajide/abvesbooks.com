@@ -337,14 +337,14 @@
 			}
 		}
 
-		public function gettingWishList($reg_number, $start, $itemsPerPage)
+		public function gettingWishList($reg_number)
 		{
 			try{
-				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id = :reg_number AND action='Wishlist' 
-					ORDER BY list_id DESC LIMIT :start, :items_per_page ");
+				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id = :reg_number AND action='Wishlist'
+
+					ORDER BY list_id DESC");
 				$query->bindValue(":reg_number", $reg_number);
-				$query->bindValue(":start", $start, PDO::PARAM_INT);
-				$query->bindValue(":items_per_page", $itemsPerPage, PDO::PARAM_INT);
+				
 				$query->execute();
 				return $query->fetchAll(PDO::FETCH_ASSOC);
 			} catch (PDOException $e) {
@@ -371,7 +371,7 @@
 		public function gettingCompNoPag($reg_number)
 		{
 			try{
-				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id =:reg_number AND action='Wishlist' ORDER BY list_id 
+				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id =:reg_number AND action='Compare' ORDER BY list_id 
 					DESC ");
 				$arrQ = array(':reg_number'=>$reg_number);
 				$query->execute($arrQ);

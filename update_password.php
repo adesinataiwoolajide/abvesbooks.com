@@ -1,6 +1,9 @@
 <?php 
     $body = 'myaccount_page';
     require_once('header.php');
+    $user_name = $_GET['user_name'];
+    $deel = $register->gettingUserCredential($user_name);
+    $full_name = $deel['full_name'];
 ?>
     <div class="breadcrumbs">
         <div class="container">
@@ -24,41 +27,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-main col-sm-12 col-xs-12">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
-                        <form action="handlers/registration/process-login.php" name="frm-login" method="POST" >
-                            <h4>Customer Login Form</h4>
-                            <p class="before-login-text">Welcome back! Sign in to your account</p>
-                            <label for="emmail_login">Email address<span class="required">*</span></label>
-                            <input id="emmail_login" type="text" name="user_name" class="form-control">
-                            <label for="password_login">Password<span class="required">*</span></label>
-                            <input id="password_login" type="password" name="password" class="form-control">
-                            
-                            
-                            <label class="inline" for="rememberme">
-                            <input type="checkbox" value="forever" id="rememberme" name="rememberme">
-                            Remember me </label><br>
-                            <button class="button" type="submit" name="login"><i class="icon-lock icons"></i>&nbsp; <span>Login</span></button>
-                        </form>
-                    </div>
+                   
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
                         <div class="single-input p-bottom50 clearfix">
                             <form action="handlers/registration/process-registration.php" name="frm-login" method="POST" >
                                 <div class="row">
                                     <div class="col-xs-12">
                                         <div class="check-title">
-                                            <h4>New Customer Registration Form</h4>
+                                            <h4>Password Update Form</h4>
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <label>First Name:</label>
                                         <div class="input-text">
-                                            <input type="text" name="full_name" class="form-control" placeholder="Enter your Full Name">
+                                            <input type="text" name="full_name" value="<?php echo $deel['full_name'] ?>" class="form-control" placeholder="Enter your Full Name">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <label>E-Mail:</label>
                                         <div class="input-text">
-                                            <input type="text" name="user_name" class="form-control" placeholder="Enter your E-mail address">
+                                            <input type="text" name="user_name" value="<?php echo $deel['user_name'] ?>" class="form-control" placeholder="Enter your E-mail address">
                                         </div>
                                     </div>
                                     
@@ -75,12 +63,9 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
-                                        <div class="billing-checkbox">
-                                            <input type="checkbox" value="forever" id="rememberme" name="rememberme">
-                                        Sign up for our newsletter! 
-                                        </div>
+                                        
                                         <div class="submit-text">
-                                            <button class="button" type="submit" name="register"><i class="fa fa-user"></i>&nbsp; <span>Register</span></button>
+                                            <button class="button" type="submit" name="register"><i class="fa fa-user"></i>&nbsp; <span>Update Your Account</span></button>
                                         </div>
                                     </div>
                                 </div>
@@ -90,13 +75,12 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
                         <h4>Retrieve your account</h4>
                         <p class="before-login-text">Welcome back! Sign in to your account</p>
-                        <form acttion="handlers/registration/retrieve-pasdsword.php" method="POST">
+                        <form acttion="handlers/registration/retrieve-password.php" method="POST">
                             <label for="emmail_login">Email address<span class="required">*</span></label>
-                            <input name="user_name" placeholder="Enter your E-mail Or Registration Number" 
-                            type="email" class="form-control">
+                            <input id="" name="user_name" placeholder="Enter your E-mail Or Registration Number" 
+                            type="text" class="form-control">
                             <br><br>
-                            <button class="button" name="retrieve-password"><i class="icon-lock icons"></i>&nbsp; <span>
-                            Retrive Password</span></button>
+                            <button class="submit" name="retrieve-password"><i class="icon-lock icons"></i>&nbsp; <span>Login</span></button>
                         </form>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 ">

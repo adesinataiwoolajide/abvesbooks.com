@@ -1,43 +1,46 @@
-<?php
-    require_once('../header.php');
-    
-    $author = new Author;
-    $type = new Type;
-    $genre = new Genre;
-    $publisher = new Publisher;
-    $category = new Category;
-    $product = new Product;
-    $order = new Order;
-    $customer = new Customer;
-    $orderId = $_GET['order_number'];
-    $buy = $order->getOrderId($orderId);  
-   
+<?php 
+$body = 'shop_grid_page';
+require_once('header.php');
+if(!isset($_SESSION['id'])){ ?>
+        <script type="text/javascript"> window.location=('login.php');</script><?php 
+    $_SESSION['error'] = "Please Register Or Login into Your Account"; 
+}
+$reg_number = $_GET['registration_number'];
+$orderId = $_GET['order_number'];
+$buy = $order->getOrderId($orderId);  
 ?>
-<div class="clearfix"></div>
-	
-<div class="content-wrapper">
-    <div class="container-fluid">
-        <div class="row pt-2 pb-2">
-            <div class="col-sm-9">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./">Home</a></li>
-                    <li class="breadcrumb-item"><a href="ship-order.php?order_number=<?php echo $orderId ?>">Shipping Order</a></li>
-                    <li class="breadcrumb-item"><a href="shipped-order.php">Shipped Order</a></li>
-                    <li class="breadcrumb-item"><a href="unshipped-order.php">Unshipped Order</a></li>
-                    <li class="breadcrumb-item"><a href="view-order.php">View All Order</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Shipping The Customer Order</li>
-                </ol>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="home"> <a title="Go to Home Page" href="./">Home</a><span>&raquo;</span></li>
+                    <li class=""> <a title="Go to Order Details" 
+                        href="my_orders.php?registration_number=<?php echo $reg_number ?>">
+                        Order List </a><span>&raquo;
+
+                        </span>
+                    </li>
+                    <li><strong>List of <?php echo $_SESSION['name'] ?> Order Details</strong></li>
+                </ul>
             </div>
         </div>
-       
-        <div class="row">
-            <div class="col-12 col-lg-12 col-xl-12">
-                <div class="card">
-                    <div class="card-body">
-                        <p>The List of Product </p>
+    </div>
+</div>
+<section class="main-container col2-right-layout">
+    <div class="main container">
+        <div class="col-main">
+            <div class="cart">
+               
+            <div class="col-main col-sm-12 col-xs-12">
+                <div class="page-content page-order">
+                    <div class="page-title">
+                        <h2><?php echo $_SESSION['name'] ?> Order List</h2>
+                    </div>
+                    <div class="order-detail-content">
                         <div class="table-responsive">
-                            <table id="default-datatable" class="table table-bordered">
-                                <thead>
+                            <table class="table table-bordered cart_summary">
+                            <thead>
                                     <tr>
                                         <th>S/N</th>
                                         <th>Product </th>
@@ -76,23 +79,22 @@
                                         $number++; 
                                     }?>
                                 </tbody>
-                            
                             </table>
                         </div>
+                        
                     </div>
                     
                 </div>
+                
             </div>
-            
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-lg-6 col-xl-6">
-                <div class="card">
-                    <div class="card-body">
-                        <p>Customer Details </p>
+            <div class="col-main col-sm-6 col-xs-12">
+                <div class="page-content page-order">
+                    <div class="page-title">
+                        <h2><?php echo $_SESSION['name'] ?> Shipping Address</h2>
+                    </div>
+                    <div class="order-detail-content">
                         <div class="table-responsive">
-                            <table id="default-datatable" class="table table-bordered"><?php
+                            <table class="table table-bordered cart_summary"><?php
                                 $buy = $order->getCustomerOrderDetails($orderId);
                                 $customer_id = $buy['customer_id'];
                                 $level = $customer->getAllSingleCustomer($customer_id);
@@ -137,15 +139,20 @@
                                 } ?>
                             </table>
                         </div>
+                        
                     </div>
+                    
                 </div>
+                
             </div>
-            <div class="col-12 col-lg-6 col-xl-6">
-                <div class="card">
-                    <div class="card-body">
-                        <p>Payment Breakdown</p>
+            <div class="col-main col-sm-6 col-xs-12">
+                <div class="page-content page-order">
+                    <div class="page-title">
+                        <h2>Payment Break Down</h2>
+                    </div>
+                    <div class="order-detail-content">
                         <div class="table-responsive">
-                            <table id="default-datatable" class="table table-bordered"><?php
+                            <table class="table table-bordered cart_summary"><?php
                                 $buy = $order->getCustomerOrderDetails($orderId);
                                 $customer_id = $buy['customer_id'];
                                 $level = $customer->getAllSingleCustomer($customer_id);
@@ -176,30 +183,16 @@
                                     </tr>
                                 </tbody>
                             </table>
-                        </div><?php 
-                        if($tot['shipping'] ==0){ ?>
-                            <a href='confirm-ship.php?action=<?php echo 'shipOrder' ?>&&order_number=<?php echo $orderId ?>&&customer_number=<?php echo $customer_id ?>'  
-                            class="btn btn-danger btn-lg btn-block">Ship The Product</a><?php 
-                        }else{ ?>
-                            <a href='confirm-ship.php?action=<?php echo 'unshipOrder' ?>&&order_number=<?php echo $orderId ?>&&customer_number=<?php echo $customer_id ?>'  
-                            class="btn btn-success btn-lg btn-block">UnShipped The Product</a><?php
-                        } ?>
-                        
+                        </div>
                         
                     </div>
                     
                 </div>
+                
             </div>
-            
         </div>
-        
     </div>
-    <!-- End container-fluid-->
-    
-</div><!--End content-wrapper-->
-         
-        
-
-<?php
-	require_once('../footer.php');
+</section>
+<?php 
+    require_once('footer.php');
 ?>

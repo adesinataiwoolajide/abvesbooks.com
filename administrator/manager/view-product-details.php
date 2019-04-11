@@ -44,6 +44,7 @@
                     <li class="breadcrumb-item"><a href="view-product-details.php?slug=<?php echo $slug ?>">View Product Details</a></li>
                     <li class="breadcrumb-item"><a href="view-products.php">View Product</a></li>
                     <li class="breadcrumb-item"><a href="add-product.php">Add Product</a></li>
+                    <li class="breadcrumb-item"><a href="upload_products.php">Upload Products</a></li>
                     <li class="breadcrumb-item active" aria-current="page">List of Saved Products</li>
                 </ol>
             </div>

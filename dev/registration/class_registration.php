@@ -111,21 +111,18 @@
 			}
 		}
 
-		public function forgetPassword($email){
+		public function updatePassword($email, $password){
 			try{
-				$select = $this->db->prepare("SELECT * FROM admin_login WHERE user_name=:email");
-				$arr = array(':email'=>$email);
-				$select->execute($arr);
-				if($select->rowCount()==0){
-					$_SESSION['error'] = $email." ". "does not exist";
-					header("Location: forget-password.php");
-					die();
+				$select = $this->db->prepare("UPDATE admin_login SET password=:password WHERE user_name=:email");
+				$arr = array(':password'=>$password, ':email'=>$email);
+				if(!empty($select->execute($arr))){
+					return true;
 				}else{
-					$disp = $select->fetch();
-					return $disp;
-				} 
+					return false;
+				}
+				
 			}catch(PDOException $e){
-				echo $e->getMessage();
+				$_SESSION['error'] = $e->getMessage();
 				return false;
 			}
 		}

@@ -72,7 +72,8 @@
                                                     <img src="<?php echo "assets/images/product/".$details['image'] ?>" alt="" style="width: 50px; height: 50px" 
                                                     alt="Product"></a></td>
                                                     
-                                                    <td class="cart_description"><p class="product-name"><a href="#"><?php echo ucwords($item['name']);?> </a></p>
+                                                    <td class="cart_description"><p class="product-name"><a href="">
+                                                    <?php echo ucwords($item['name']);?> </a></p>
                                                         
                                                     </td>
                                                     <td class="qty"><?php echo $quantity = $item['quantity']; ?>

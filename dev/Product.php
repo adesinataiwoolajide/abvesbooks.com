@@ -239,7 +239,7 @@
 		{
 			$db = Database::getInstance()->getConnection();
 			$query = $db->prepare("DELETE FROM products WHERE slug=:slug");
-			$query->bindValue(":type_id", $type_id);
+			$query->bindValue(":slug", $slug);
 			if($query->execute()){
 				return true;
 			}else{
