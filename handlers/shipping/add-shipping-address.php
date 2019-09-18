@@ -18,7 +18,7 @@ try{
 	
 		if(!empty($register->saveTheShippingAddress($customer_id, $phone, $address, $landmark, $state, $city))){
 			$_SESSION['success'] = "Shipping Address Saved";
-			$all_purpose->redirect("../../shipping-address.php");
+			$all_purpose->redirect("../../dashboard.php");
 		}else{
 			$_SESSION['success'] = "Shipping Address Saved";
 			$all_purpose->redirect("../../shipping-address.php");

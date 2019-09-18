@@ -1,20 +1,27 @@
 <?php
 session_start();
 require_once("../../dev/autoload.php");
+require_once("../../connection/connection.php");
 require_once("../../vendor/autoload.php");
-require_once("../account/authenticate.php");
+require_once '../../dev/general/all_purpose_class.php';
 $order = new Order;
+$payment = new Payment;
+$product = new Product;
+$all_purpose = new all_purpose($db);
 
 $reference = isset($_GET['reference']) ? $_GET['reference'] : '';
 if(!$reference){
     die('No reference supplied');
 }
 
+$reg_number = $_SESSION['reg_number'];
+$customer_id = $reg_number;
+
 // initiate the Library's Paystack Object
-$paystack = new Yabacon\Paystack('sk_test_483ce8535dad2c223ce439f44dfb75db683aa029');
+$paystack = new Yabacon\Paystack('sk_test_3ab911f611cb52cd9ac47d872263f96536b6cb2b');
 try{
     $tranx = $paystack->transaction->verify([
-        'reference'=> $_SESSION['paystackReference'], // unique to transactions
+        'reference'=> $reference, // unique to transactions
     ]);
 } catch(\Yabacon\Paystack\Exception\ApiException $e){
     print_r($e->getResponseObject());
@@ -22,21 +29,20 @@ try{
 }
 
 if('success' === $tranx->data->status) {
-    $order->updateOrderPaymentStatus($_SESSION['transactionId']);
+
+
+    $order->updateOnlinePaymentStatus($customer_id, $reference);
     $_SESSION['success'] = "Transaction successful.";
+    $payment->saveFinalPayment();
 
-    //send user receipt to email
-    Email::sendUserPaymentReceipt($_SESSION['email'], $_SESSION['name'], $_SESSION['transactionId'], number_format($_SESSION['orderAmount']));
-
-    //notify admin of order
-    Email::sendAdminOrderNotificationEmail($_SESSION['transactionId'], $_SESSION['customerid']);
     unset($_SESSION['cart']);
     unset($_SESSION['transactionId']);
     unset($_SESSION['paystackReference']);
-    General::redirectTo("../../orders.php");
+    $all_purpose->redirect("../../my_orders.php?registration_number=$reg_number");
+
 }else{
     $_SESSION['error'] = "Unable to verify your transaction";
-    General::redirectTo("../../checkout.php");
+    $all_purpose->redirect("../../checkout.php");
 }
 
 ?>

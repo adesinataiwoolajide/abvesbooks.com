@@ -12,10 +12,10 @@
 			$activate = $register->activateTheUser($reg_number, $status);
 			if($activate){
 				$_SESSION['success'] = "Account has been activated. Please Login with Your Details";
-				redirectTo("../../login.php");
+				$all_purpose->redirect("../../login.php");
 			}else{
 				$_SESSION['error'] = "Invalid activation code. Please try again";
-				redirectTo("../../login.php");
+				$all_purpose->redirect("../../login.php");
 			}
 		}else{
 			$_SESSION['error'] = "Please Click On The Link in Your Mail To Activate Your Account";

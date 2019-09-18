@@ -12,7 +12,7 @@
 			$reg_number = $all_purpose->sanitizeInput($_POST['user_name']);
 			if($register->forgotPassword($user_name)){
 				$_SESSION['error'] = "Ooops! $user_name Does Not Exist";
-				$all_purpose->redirect("../.././");
+				$all_purpose->redirect("../../login.php");
 			}else{
 				$myDetails = $register->gettingUserCredential($user_name);
 				$full_name = $myDetails['full_name'];
@@ -23,11 +23,11 @@
 			}
 		}else{
 			$_SESSION['error'] = "Please Fill The Below Form To Retrieve Your Account";
-			$all_purpose->redirect("../.././");
+			$all_purpose->redirect("../../login.php");
 		}
 	} catch (PDOException $e) {
 		$_SESSION['error'] = $e->getMessage();
-		$all_purpose->redirect("../.././");
+		$all_purpose->redirect("../../login.php");
 	}
 
 ?>

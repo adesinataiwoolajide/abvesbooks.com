@@ -1,0 +1,17 @@
+[03-Jun-2019 14:37:48 Africa/Lagos] PHP Notice:  Undefined offset: 6 in /home/abvesboo/public_html/test/administrator/manager/process_upload_products.php on line 28
+[03-Jun-2019 14:37:48 Africa/Lagos] PHP Notice:  Undefined offset: 7 in /home/abvesboo/public_html/test/administrator/manager/process_upload_products.php on line 29
+[03-Jun-2019 14:37:48 Africa/Lagos] PHP Notice:  Undefined offset: 8 in /home/abvesboo/public_html/test/administrator/manager/process_upload_products.php on line 30
+[03-Jun-2019 14:37:48 Africa/Lagos] PHP Notice:  Undefined offset: 9 in /home/abvesboo/public_html/test/administrator/manager/process_upload_products.php on line 31
+[03-Jun-2019 14:37:48 Africa/Lagos] PHP Notice:  Undefined offset: 10 in /home/abvesboo/public_html/test/administrator/manager/process_upload_products.php on line 32
+[22-Jul-2019 12:07:56 Africa/Lagos] PHP Notice:  Undefined index: name in /home/abvesboo/public_html/administrator/header.php on line 62
+[22-Jul-2019 12:07:56 Africa/Lagos] PHP Notice:  Undefined index: user_name in /home/abvesboo/public_html/administrator/header.php on line 67
+[22-Jul-2019 12:07:56 Africa/Lagos] PHP Notice:  Undefined index: name in /home/abvesboo/public_html/administrator/header.php on line 195
+[22-Jul-2019 12:07:56 Africa/Lagos] PHP Notice:  Undefined index: user_name in /home/abvesboo/public_html/administrator/header.php on line 196
+[22-Jul-2019 13:40:42 Africa/Lagos] PHP Notice:  Undefined index: name in /home/abvesboo/public_html/administrator/header.php on line 62
+[22-Jul-2019 13:40:42 Africa/Lagos] PHP Notice:  Undefined index: user_name in /home/abvesboo/public_html/administrator/header.php on line 67
+[22-Jul-2019 13:40:42 Africa/Lagos] PHP Notice:  Undefined index: name in /home/abvesboo/public_html/administrator/header.php on line 195
+[22-Jul-2019 13:40:42 Africa/Lagos] PHP Notice:  Undefined index: user_name in /home/abvesboo/public_html/administrator/header.php on line 196
+[22-Jul-2019 20:17:39 Africa/Lagos] PHP Notice:  Undefined index: name in /home/abvesboo/public_html/administrator/header.php on line 62
+[22-Jul-2019 20:17:39 Africa/Lagos] PHP Notice:  Undefined index: user_name in /home/abvesboo/public_html/administrator/header.php on line 67
+[22-Jul-2019 20:17:39 Africa/Lagos] PHP Notice:  Undefined index: name in /home/abvesboo/public_html/administrator/header.php on line 195
+[22-Jul-2019 20:17:39 Africa/Lagos] PHP Notice:  Undefined index: user_name in /home/abvesboo/public_html/administrator/header.php on line 196

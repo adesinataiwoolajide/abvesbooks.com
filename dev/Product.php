@@ -229,7 +229,7 @@
 		public function sumAllProduct()
 		{
 			$db = Database::getInstance()->getConnection();
-			$query = $db->prepare("SELECT sum(amount) as new_amount FROM products");
+			$query = $db->prepare("SELECT sum(amount*quantity) as new_amount FROM products");
 			$query->execute();
 			$lol= $query->fetch();
 			return $now= $lol['new_amount'];
@@ -413,6 +413,19 @@
 		// 	return $query->fetchAll(PDO::FETCH_ASSOC);
 		// }
  		//using this for listing categories
+ 		
+ 		
+ 		public function getSingleCategoryProductss($category_id, $start, $itemsPerPage)
+		{
+			$db = Database::getInstance()->getConnection();
+            $query = $db->prepare("SELECT * FROM products WHERE category_id=:category_id ORDER BY product_id DESC LIMIT :start, :items_per_page");
+            $query->bindValue(":category_id", $category_id);
+            $query->bindValue(":start", $start, PDO::PARAM_INT);
+			$query->bindValue(":items_per_page", $itemsPerPage, PDO::PARAM_INT);
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+		
 		public function listSingleGensProductS($genre_id)
 		{
 			$db = Database::getInstance()->getConnection();
@@ -479,5 +492,86 @@
 			$query->execute();
 			return $query->fetchAll(PDO::FETCH_ASSOC);
 		}
+		
+		public function searchProduuct($search){
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM products WHERE product_name LIKE '%$search%' ORDER BY product_id DESC LIMIT 0,30");
+			$query->bindValue(":search", $search);
+			$query->execute();
+			$fetch = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $fetch;
+		}
+		
+		public function searchProduucts($search, $begin, $end){
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM products WHERE product_name LIKE '%$search%' LIMIT :begin, :end");
+			$query->bindValue(":search", $search);
+			$query->bindValue(":begin", $begin, PDO::PARAM_INT);
+			$query->bindValue(":end", $end, PDO::PARAM_INT);
+			$query->execute();
+			$fetch = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $fetch;
+		}
+		
+		public function searchingProduuct($search, $begin, $end){
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM products WHERE product_name LIKE '%:search%' LIMIT :begin, :end");
+			$query->bindValue(":search", $search);
+			$query->bindValue(":begin", $begin, PDO::PARAM_INT);
+			$query->bindValue(":end", $end, PDO::PARAM_INT);
+			$query->execute();
+			$fetch = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $fetch;
+		}
+		
+		
+		public function searchingTheProduuct($search, $start, $page1){
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM products WHERE product_name LIKE '%$search%' LIMIT :starto, :pago");
+			$query->bindValue(":search", $search);
+			$query->bindValue(":start", $start, PDO::PARAM_INT);
+			$query->bindValue(":page1", $page1, PDO::PARAM_INT);
+			$query->execute();
+			$fetch = $query->fetchAll(PDO::FETCH_ASSOC);
+			return $fetch;
+		}
+		
+		public function getAllProductManuListing()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM products ORDER BY publisher_id asc LIMIT 0,20");
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+		
+		public function getAllProductByGenreListing()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM products ORDER BY genre_id desc LIMIT 0,20");
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
+
+		
+		public function allProductListing($start, $itemsPerPage)
+		{
+			$db = Database::getInstance()->getConnection();
+            $query = $db->prepare("SELECT * FROM products ORDER BY product_id DESC LIMIT :start, :items_per_page");
+            $query->bindValue(":start", $start, PDO::PARAM_INT);
+			$query->bindValue(":items_per_page", $itemsPerPage, PDO::PARAM_INT);
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+		
+		public function listSingleGensProductListing($genre_id)
+		{
+			$db = Database::getInstance()->getConnection();
+            $query = $db->prepare("SELECT * FROM products WHERE genre_id=:genre_id ORDER BY product_id DESC LIMIT 0,10");
+            $query->bindValue(":genre_id", $genre_id);
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+		}
+
 
 	}

@@ -70,7 +70,7 @@
                                             </td>
                                             <td><?php echo $see['product_name'] ?></td>
                                             <td><?php echo $listOrder['quantity'] ?></td>
-                                            <td>&#8358;<?php echo number_format($listOrder['weight_pro']) ?></td>
+                                            <td>&#8358;<?php echo ($listOrder['weight_pro']) ?></td>
                                             <td>&#8358;<?php echo number_format($listOrder['amount']) ?></td>
                                         </tr><?php
                                         $number++; 

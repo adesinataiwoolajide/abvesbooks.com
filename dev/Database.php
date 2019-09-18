@@ -8,7 +8,9 @@ class Database{
      */
     protected function __construct(){
 
-        
+        // $dbname = "abvesboo_gloriousbooks";
+        // $username = "abvesboo_books";
+        // $password = "olajide1405";
         $dbname = "bookstores";
         $username = "root";
         $password = "";

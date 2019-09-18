@@ -17,10 +17,10 @@
 			}else{
 				$returnUrl = $_SERVER['HTTP_REFERER'];
 				$myDetails = $register->CustomerLogin($user_name, $password);
-				// if($myDetails['status'] == 9){
-				// 	$_SESSION['error'] = "Ooops! Please Check Your E-Mail to activate yur account";
-				// 	$all_purpose->redirect("../../login.php");
-				// }else{
+				if($myDetails['status'] == 0){
+					$_SESSION['error'] = "Ooops! Please Check Your E-Mail to activate yur account";
+					$all_purpose->redirect("../../login.php");
+				}else{
 					$_SESSION['id'] = $myDetails['registration_id'];
 					$_SESSION['name'] = $myDetails['full_name'];
 					$_SESSION['user_name'] = $myDetails['user_name'];
@@ -35,9 +35,9 @@
 						$all_purpose->redirect("../../shipping-address.php");
 					}else{
 						$_SESSION['success'] = "Login successfull";
-						$all_purpose->redirect("../.././");
+						$all_purpose->redirect("../../dashboard.php");
 					}
-			//	}
+			    }
 				
 			}
 		}else{

@@ -184,17 +184,20 @@
                             </div>
                             <div class="block-content">
                                 <dl>
+                                    <a class="continue-btn" href="dashboard.php"><i class="fa fa-arrow-left"> </i>&nbsp; 
+                                        My Dashboard
+                                    </a><br><br>
                                     <a class="continue-btn" href="shop.php"><i class="fa fa-arrow-left"> </i>&nbsp; 
                                         Continue shopping
                                     </a><br><br>
                                     <a class="checkout-btn" href="shopping-cart.php"><i class="fa fa-arrow-left"> </i>&nbsp; 
                                         Shopping Cart
                                     </a> <br><br>
-                                    <a class="checkout-btn" href="checkout.php"><i class="fa fa-shopping-cart"> </i>&nbsp; 
+                                    <a class="checkout-btn" href="check-out.php"><i class="fa fa-shopping-cart"> </i>&nbsp; 
                                         Check Out
                                     </a> <br><br>
-                                    <a class="checkout-btn" href="shop.php"><i class="fa fa-arrow-left"> </i>&nbsp; 
-                                    Continue shopping</a>
+                                    <!--<a class="checkout-btn" href="shop.php"><i class="fa fa-arrow-left"> </i>&nbsp; -->
+                                    <!--Continue shopping</a>-->
 
                                          
                                     </div>

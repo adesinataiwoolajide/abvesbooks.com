@@ -11,6 +11,7 @@ try{
     if(isset($_POST['add-product'])){
         $check =0;      
         $filename=$_FILES["file"]["tmp_name"];
+        $email = $_SESSION['user_name'];
         
         if($_FILES["file"]["size"] > 0)
         {
@@ -44,30 +45,69 @@ try{
                 $query2->bindValue(":genre_name", $genre_name);
                 $query2->execute();
                 $see_genre = $query2->fetch();
-                $genre_id = $see_genre['genre_id'];
+                $genreid = $see_genre['genre_id'];
+
+                $weightname = explode(" ", $weight_name); 
+                if(empty($genreid)){
+                    $genre_id = 74;
+                }else{
+                    $genre_id = $genreid;
+                }
+
+                if(empty($description)){
+                    $description = "Null";
+                }else{
+                    $description = $description;
+                }
+
+                if(empty($amount)){ $amount =0; 
+                }else{ 
+                    $amount = $amount;
+                }
+
+                if(empty($quantity)){ $quantity =0; 
+                }else{ 
+                    $quantity = $quantity;
+                }
 
                 $query3 = $db->prepare("SELECT * FROM products_category WHERE category_name=:category_name");
                 $query3->bindValue(":category_name", $category_name);
                 $query3->execute();
                 $see_genre = $query3->fetch();
-                $category_id = $see_genre['category_id'];
+                $categoryid = $see_genre['category_id'];
+                if(empty($categoryid)){
+                    $category_id = 3;
+                }else{
+                    $category_id = $categoryid;
+                }
 
                 $query4 = $db->prepare("SELECT * FROM publishers WHERE publisher_name=:publisher_name");
                 $query4->bindValue(":publisher_name", $publisher_name);
                 $query4->execute();
                 $see_genre = $query4->fetch();
-                $publisher_id = $see_genre['publisher_id'];
+                $publisherid = $see_genre['publisher_id'];
+                if(empty($publisherid)){
+                    $publisher_id = 6;
+                }else{
+                    $publisher_id = $publisherid;
+                }
 
                 $query5 = $db->prepare("SELECT * FROM product_weight WHERE weight_name=:weight_name");
                 $query5->bindValue(":weight_name", $weight_name);
                 $query5->execute();
                 $see_genre = $query5->fetch();
-                $weight_id = $see_genre['weight_id'];
+                $weightid = $see_genre['weight_id'];
 
-                if($edtion == " "){
+                if(empty($edtion)){
                     $edition = "Null";
                 }else{
                     $edition = $edtion;
+                }
+
+                if(($weight_name == "Null") OR (empty($weight_name))){
+                    $weight_id = 1;
+                }else{
+                    $weight_id = $weightid;
                 }
                 
                 if($product->createProduct($product_name, $slug, $image, $genre_id, $category_id, $amount, $quantity, $description, 
@@ -82,15 +122,14 @@ try{
 
                         $action = "Updated $product_name stock with $quantity quantity";
                         $his = $all_purpose->getUserDetailsandAddActivity($email, $action);
-                        $_SESSION['success'] = "You Have Added Product with the Product Name $product_name with the Product Number $slug Successfully";
+                        $_SESSION['success'] = "You Have Uploaded The Products Successfully";
                         
                     }else{
                         $add_stock = $product->addProductStock($product_name, $category_id, $genre_id, $quantity, $publisher_id, $edition);
                         $action = "Added $product_name with $slug to the stock list";
                         $his = $all_purpose->getUserDetailsandAddActivity($email, $action);
-                        $_SESSION['success'] = "You Have Added Product with the Product Name $productname with the Product Number $slug Successfully";
-                       // $all_purpose->redirect("view-products.php");
-                            
+                        $_SESSION['success'] = "You Have Uploaded The Products Successfully";
+                           
                     }
                     
                 }else{
@@ -109,7 +148,7 @@ try{
     }
         
 }catch(PDOException $e){
-    $_SESSION['error'] =  $e->getMessage();
+    echo  $e->getMessage();
    // $all_purpose->redirect($return);
 }
     ?>

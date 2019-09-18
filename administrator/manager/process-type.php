@@ -13,7 +13,7 @@ try{
         $total = count($type->checkIfAlreadyAdded($type_name));
 
         if($total>0){
-            $_SESSION['error']= "You Have Added $type_name Book Product Before";
+            $_SESSION['error']= "You Have Added $type_name Product Type Before";
             $all_purpose->redirect($return);
         }else{
             if($type->createProductType($type_name)){

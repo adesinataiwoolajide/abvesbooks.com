@@ -5,6 +5,11 @@ require_once("../../connection/connection.php");
 require_once("../../vendor/autoload.php");
 require_once '../../dev/general/all_purpose_class.php';
 $all_purpose = new all_purpose($db);
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require '../../vendor/auto.php';
 if(!isset($_SESSION['id'])){ ?>
     <script>
         window.location=('login.php');
@@ -52,8 +57,9 @@ if(!isset($_SESSION['id'])){ ?>
         //live publick key = pk_live_bca47aeb1428068a1d0ae730e9f7067b6eea7ab6
 
         //abves test code    sk_test_e512d5d30aa7db1a194069474fa3bf8d60a34034
+        //abves live sk_live_d5604a9a55c556eac8d63bf5b96174fcd1c0d619
         
-        $paystack = new Yabacon\Paystack('sk_test_e512d5d30aa7db1a194069474fa3bf8d60a34034');
+        $paystack = new Yabacon\Paystack('sk_test_3ab911f611cb52cd9ac47d872263f96536b6cb2b');
         try
         {
           $tranx = $paystack->transaction->initialize([
@@ -72,11 +78,57 @@ if(!isset($_SESSION['id'])){ ?>
             $order->updateOrderPaymentStatus($customer_id);
             $order->updateOrderWithPaystackReference($_SESSION['transactionId'], $tranx->data->reference);
             //send user receipt to email
-            Email::sendUserPaymentReceipt($_SESSION['email'], $_SESSION['name'], $_SESSION['transactionId'], 
-            number_format($_SESSION['orderAmount']));
+            //Email::sendUserPaymentReceipt($_SESSION['email'], $_SESSION['name'], $_SESSION['transactionId'],  number_format($_SESSION['orderAmount']));
             //notify admin of order
-            Email::sendAdminOrderNotificationEmail($_SESSION['transactionId'], $_SESSION['reg_number']);
+            //Email::sendAdminOrderNotificationEmail($_SESSION['transactionId'], $_SESSION['reg_number']);
+            
+//             $mail = new PHPMailer();
+// 			$mail->IsSMTP();
+// 			$mail->SMTPAuth = true; 
+// 			$mail->Host = "mail.abvesbooks.com"; 
+// 			$mail->Port = 465; 
+// 			$mail->SMTPSecure = 'ssl'; 
+            
+// 			$mail->Username = "info@abvesbooks.com"; 
+// 			$mail->Password = "adesinataiwo"; 
+//             $mail->isHTML(true);     
+// 			$mail->SetFrom('info@abvesbooks.com', 'Customer Order Details');
+// 			$mail->AddReplyTo("info@abvesbooks.com","Order Details");
+// 			$mail->Subject = "My Order From Abves Books";
+// 			$full_name = $_SESSION['name'];
+// 			$user_name = $_SESSION['email'];
+// 			$trans = $_SESSION['transactionId'];
+// 			$money = number_format($_SESSION['orderAmount']);
+// 			$mail->MsgHTML("************************************************<br />
+// 				THIS IS AN AUTOMATED EMAIL - PLEASE DO NOT REPLY <br />
+// 				************************************************<br /><br />
+// 				Dear $full_name ,  <br>
+// 				Thanks for Ordering from  our website. Your Order was successful. <br>
+// 				Please Preview Your Order Details Below <br>
+// 				<p>
+// 					Transaction number : $trans <br />
+// 					Total Order : $money <br />
+					
+// 				</p>
+			
+// 				<p>
+// 					Thank you for your patronage.
+// 				</p>
+// 				<br />
+// 				For inquiries and support please use our contact form. <br />
+// 				Thank you. <br />");
+// 			$mail->AddAddress($user_name);
+// 			$mail->SMTPDebug = 2;
+// 			if(!$mail->Send()) {
+					    
+// // 			echo "Mailer Error: " . $mail->ErrorInfo;
+// 			} else {
+			 
+// 			}
+			
+			
         }
+        
 
         header('Location: ' . $tranx->data->authorization_url);    
     }else{

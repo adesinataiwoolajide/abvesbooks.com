@@ -1,0 +1,571 @@
+[16-May-2019 16:44:12 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Thu, 16 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[16-May-2019 16:45:52 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Thu, 16 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[17-May-2019 12:50:25 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[17-May-2019 13:29:02 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[17-May-2019 13:29:06 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[17-May-2019 13:30:22 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[17-May-2019 13:38:43 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(71): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[17-May-2019 13:41:18 Africa/Lagos] PHP Warning:  require_once(/home/abvesboo/public_html/test/dev/PHPMailer.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/dev/autoload.php on line 4
+[17-May-2019 13:41:18 Africa/Lagos] PHP Fatal error:  require_once(): Failed opening required '/home/abvesboo/public_html/test/dev/PHPMailer.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/dev/autoload.php on line 4
+[17-May-2019 13:42:55 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailer.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailer.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailer.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailer.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailer.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(72): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailer.php on line 1760
+[17-May-2019 14:39:18 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailer.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailer.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailer.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailer.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailer.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(72): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailer.php on line 1760
+[17-May-2019 20:09:06 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailer.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailer.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailer.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailer.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailer.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(72): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailer.php on line 1760
+[17-May-2019 20:11:00 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailer.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailer.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailer.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailer.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailer.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(72): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailer.php on line 1760
+[17-May-2019 20:11:20 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailer.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailer.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailer.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailer.php(1540): PHPMailer->smtpSend('Date: Fri, 17 M...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailer.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(72): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailer.php on line 1760
+[12-Jun-2019 13:08:35 Africa/Lagos] PHP Warning:  require(PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 9
+[12-Jun-2019 13:08:35 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'PHPMailerAutoload.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 9
+[12-Jun-2019 13:09:26 Africa/Lagos] PHP Warning:  require(../../dev/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 9
+[12-Jun-2019 13:09:26 Africa/Lagos] PHP Fatal error:  require(): Failed opening required '../../dev/PHPMailerAutoload.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 9
+[12-Jun-2019 13:17:17 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailer.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailer.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailer.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailer.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailer.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(69): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailer.php on line 1760
+[12-Jun-2019 13:22:44 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(70): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php on line 1760
+[12-Jun-2019 13:22:50 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(70): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php on line 1760
+[12-Jun-2019 14:30:44 Africa/Lagos] PHP Fatal error:  Uncaught Error: Call to undefined method PHPMailer::SMTP() in /home/abvesboo/public_html/test/handlers/registration/process-registration.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 36
+[12-Jun-2019 19:27:30 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(69): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php on line 1760
+[12-Jun-2019 19:28:32 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(69): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php on line 1760
+[12-Jun-2019 19:29:09 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(69): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php on line 1760
+[12-Jun-2019 19:29:26 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Wed, 12 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(69): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/dev/PHPMailerAutoload.php on line 1760
+[13-Jun-2019 10:31:12 Africa/Lagos] PHP Warning:  require(vendor/auto.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 14
+[13-Jun-2019 10:31:12 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'vendor/auto.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 14
+[13-Jun-2019 10:31:59 Africa/Lagos] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 10:31:59 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:06:25 Africa/Lagos] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:06:25 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:07:26 Africa/Lagos] PHP Warning:  require(path/to/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:07:26 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'path/to/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:10:21 Africa/Lagos] PHP Warning:  require(phpmailer/PHPMailer/src/Exception.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:10:21 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'phpmailer/PHPMailer/src/Exception.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/vendor/auto.php on line 6
+[13-Jun-2019 12:12:10 Africa/Lagos] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(79): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 12:33:57 Africa/Lagos] PHP Warning:  require(mailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 42
+[13-Jun-2019 12:33:57 Africa/Lagos] PHP Fatal error:  require(): Failed opening required 'mailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 42
+[13-Jun-2019 12:35:14 Africa/Lagos] PHP Warning:  require_once(/home/abvesboo/public_html/test/dev/PHPMailer\PHPMailer\PHPMailer.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/dev/autoload.php on line 4
+[13-Jun-2019 12:35:14 Africa/Lagos] PHP Fatal error:  require_once(): Failed opening required '/home/abvesboo/public_html/test/dev/PHPMailer\PHPMailer\PHPMailer.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/dev/autoload.php on line 4
+[13-Jun-2019 12:37:05 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(79): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[13-Jun-2019 12:41:22 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(79): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[13-Jun-2019 12:41:26 Africa/Lagos] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php:1760
+Stack trace:
+#0 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1885): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1798): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1540): PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php(1376): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(79): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/mailer/PHPMailerAutoload.php on line 1760
+[13-Jun-2019 12:43:06 Africa/Lagos] PHP Warning:  require_once(/home/abvesboo/public_html/test/dev/PHPMailer\PHPMailer\SMTP.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/dev/autoload.php on line 4
+[13-Jun-2019 12:43:06 Africa/Lagos] PHP Fatal error:  require_once(): Failed opening required '/home/abvesboo/public_html/test/dev/PHPMailer\PHPMailer\SMTP.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/dev/autoload.php on line 4
+[13-Jun-2019 12:44:15 Africa/Lagos] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 11:44:55 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\SMTP' not found in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1736
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1861): PHPMailer\PHPMailer\PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1736
+[13-Jun-2019 11:45:26 UTC] PHP Warning:  The use statement with non-compound name 'PHPMailer' has no effect in /home/abvesboo/public_html/test/vendor/auto.php on line 3
+[13-Jun-2019 11:45:26 UTC] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home/abvesboo/public_html/test/vendor/auto.php on line 4
+[13-Jun-2019 11:45:26 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\SMTP' not found in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1736
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1861): PHPMailer\PHPMailer\PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1736
+[13-Jun-2019 11:45:55 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\SMTP' not found in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1736
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1861): PHPMailer\PHPMailer\PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1736
+[13-Jun-2019 11:48:26 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\PHPMailer' not found in /home/abvesboo/public_html/test/handlers/registration/process-registration.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 16
+[13-Jun-2019 11:49:20 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1759
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1884): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1797): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1539): PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1375): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(78): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1759
+[13-Jun-2019 11:51:08 UTC] PHP Warning:  require(../../vendor/phpmailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 15
+[13-Jun-2019 11:51:08 UTC] PHP Fatal error:  require(): Failed opening required '../../vendor/phpmailer/PHPMailerAutoload.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 15
+[13-Jun-2019 11:52:04 UTC] PHP Warning:  require(../../vendor/phpmailer/src/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 15
+[13-Jun-2019 11:52:04 UTC] PHP Fatal error:  require(): Failed opening required '../../vendor/phpmailer/src/PHPMailerAutoload.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 15
+[13-Jun-2019 11:54:30 UTC] PHP Fatal error:  Uncaught Error: Class 'SMTP' not found in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1759
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1884): PHPMailer->getSMTPInstance()
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1797): PHPMailer->smtpConnect(Array)
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1539): PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#3 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1375): PHPMailer->postSend()
+#4 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(78): PHPMailer->send()
+#5 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1759
+[13-Jun-2019 11:55:35 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\PHPMailer' not found in /home/abvesboo/public_html/test/handlers/registration/process-registration.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 16
+[13-Jun-2019 11:56:37 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\PHPMailer' not found in /home/abvesboo/public_html/test/handlers/registration/process-registration.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/abvesboo/public_html/test/handlers/registration/process-registration.php on line 16
+[13-Jun-2019 11:57:18 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 11:59:05 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 12:01:16 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(77): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 12:09:16 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(78): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 12:09:44 UTC] PHP Fatal error:  Uncaught PHPMailer\PHPMailer\Exception: SMTP Error: Could not connect to SMTP host. in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php:1947
+Stack trace:
+#0 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1774): PHPMailer\PHPMailer\PHPMailer->smtpConnect(Array)
+#1 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Thu, 13 J...', 'This is a multi...')
+#2 /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php(1352): PHPMailer\PHPMailer\PHPMailer->postSend()
+#3 /home/abvesboo/public_html/test/handlers/registration/process-registration.php(78): PHPMailer\PHPMailer\PHPMailer->send()
+#4 {main}
+  thrown in /home/abvesboo/public_html/test/vendor/phpmailer/src/PHPMailer.php on line 1947
+[13-Jun-2019 13:38:02 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/abvesboo/public_html/test/vendor/phpmailer/src/SMTP.php:257) in /home/abvesboo/public_html/test/dev/general/all_purpose_class.php on line 51
+[13-Jun-2019 14:12:42 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function redirectTo() in /home/abvesboo/public_html/test/handlers/registration/activate-account.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/abvesboo/public_html/test/handlers/registration/activate-account.php on line 15
+[14-Jul-2019 04:12:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[19-Jul-2019 02:24:51 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[19-Jul-2019 02:24:59 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[19-Jul-2019 02:25:01 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[19-Jul-2019 02:25:02 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:08 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:09 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:10 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:10 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:10 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:10 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:10 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:37 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:37 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:01:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:15 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:15 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:37 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:37 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:38 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:02:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:04 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:04 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:04 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:05 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:05 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:05 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:05 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:05 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:30 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:31 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:32 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:46 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:03:46 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[08-Aug-2019 19:04:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:45 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:46 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:46 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:46 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:27:46 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:02 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:03 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:18 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:19 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:39 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:40 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:41 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:42 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:43 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:28:44 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:13 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:13 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:13 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:14 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:14 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:14 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:14 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:14 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:14 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:15 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:15 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:15 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:15 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:16 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7
+[15-Aug-2019 11:29:17 Africa/Lagos] PHP Notice:  Undefined index: HTTP_REFERER in /home/abvesboo/public_html/handlers/registration/addit.php on line 7

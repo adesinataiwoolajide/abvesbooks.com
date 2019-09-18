@@ -92,7 +92,7 @@ $reg_number = $_GET['registration_number'];
                                                 if($listOrder['paid_status'] ==0){ ?>
                                                     <p style="color: red"> Pending</p><?php
                                                 }else{ ?>
-                                                    <p style="color: green"> Confirmed</p><?php
+                                                    <p style="color: green"> Paid</p><?php
                                                 } ?>
                                                 
                                             </td>
@@ -109,7 +109,8 @@ $reg_number = $_GET['registration_number'];
                                                     <p style="color: red"> Pending</p><?php
                                                 }else{ ?>
                                                     <p style="color: green"> Delivered</p><?php
-                                                } ?></td>
+                                                } ?>
+                                            </td>
                                             <td>&#8358;<?php echo number_format($listOrder['amount']) ?></td>
                                         </tr><?php
                                         $number++; 

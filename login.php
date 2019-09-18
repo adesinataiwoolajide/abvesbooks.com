@@ -29,9 +29,9 @@
                             <h4>Customer Login Form</h4>
                             <p class="before-login-text">Welcome back! Sign in to your account</p>
                             <label for="emmail_login">Email address<span class="required">*</span></label>
-                            <input id="emmail_login" type="text" name="user_name" class="form-control">
+                            <input id="emmail_login" type="text" name="user_name" class="form-control" required>
                             <label for="password_login">Password<span class="required">*</span></label>
-                            <input id="password_login" type="password" name="password" class="form-control">
+                            <input id="password_login" type="password" name="password" class="form-control" required>
                             
                             
                             <label class="inline" for="rememberme">
@@ -52,26 +52,26 @@
                                     <div class="col-sm-12">
                                         <label>First Name:</label>
                                         <div class="input-text">
-                                            <input type="text" name="full_name" class="form-control" placeholder="Enter your Full Name">
+                                            <input type="text" name="full_name" class="form-control" placeholder="Enter your Full Name" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <label>E-Mail:</label>
                                         <div class="input-text">
-                                            <input type="text" name="user_name" class="form-control" placeholder="Enter your E-mail address">
+                                            <input type="email" name="user_name" class="form-control" placeholder="Enter your E-mail address" required>
                                         </div>
                                     </div>
                                     
                                     <div class="col-sm-12">
                                         <label>Password</label>
                                         <div class="input-text">
-                                            <input type="password" name="password" class="form-control" placeholder="Enter your Password" minlenght="4">
+                                            <input type="password" name="password" class="form-control" placeholder="Enter your Password" minlenght="4" required>
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <label>Repeat Password</label>
                                         <div class="input-text">
-                                            <input type="password" name="repeat" class="form-control" placeholder="Repeat Your Password" minenght="4">
+                                            <input type="password" name="repeat" class="form-control" placeholder="Repeat Your Password" minenght="4 required">
                                         </div>
                                     </div>
                                     <div class="col-xs-12">
@@ -90,12 +90,13 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
                         <h4>Retrieve your account</h4>
                         <p class="before-login-text">Welcome back! Sign in to your account</p>
-                        <form acttion="handlers/registration/retrieve-pasdsword.php" method="POST">
-                            <label for="emmail_login">Email address<span class="required">*</span></label>
+                        <form action="handlers/registration/retrieve-password.php" name="frm-login" method="POST">
+                            <label for="email_login">Email address<span class="required">*</span></label>
                             <input name="user_name" placeholder="Enter your E-mail Or Registration Number" 
-                            type="email" class="form-control">
+                            type="email" class="form-control" required>
                             <br><br>
-                            <button class="button" name="retrieve-password"><i class="icon-lock icons"></i>&nbsp; <span>
+                            <button type="submit" class="button" name="retrieve-password">
+                            <i class="icon-lock icons"></i>&nbsp; <span>
                             Retrive Password</span></button>
                         </form>
                     </div>

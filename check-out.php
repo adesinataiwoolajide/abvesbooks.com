@@ -174,7 +174,7 @@
                     </div>
                     <div class="cart_navigation"> 
                         <a class="continue-btn" href="shipping-address.php"><i class="fa fa-arrow-left"> 
-                        </i>&nbsp; Back to Shopping Address</a> 
+                        </i>&nbsp; Back to Shipping Address</a> 
                     </div>
                 </div>
             </div>

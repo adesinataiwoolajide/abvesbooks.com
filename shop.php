@@ -38,31 +38,31 @@
                         </div>
                         <div class="toolbar column">
                             <div class="sorter">
-                                <div class="short-by">
-                                    <label>Sort By:</label>
-                                    <select>
-                                        <option selected="selected">Position</option>
-                                        <option>Name</option>
-                                        <option>Price</option>
-                                        <option>Size</option>
-                                    </select>
-                                </div>
-                                <div class="short-by page">
-                                    <label>Show:</label>
-                                    <select>
-                                        <option selected="selected">16</option>
-                                        <option>20</option>
-                                        <option>25</option>
-                                        <option>30</option>
-                                    </select>
-                                </div>
+                                <!--<div class="short-by">-->
+                                <!--    <label>Sort By:</label>-->
+                                <!--    <select>-->
+                                <!--        <option selected="selected">Position</option>-->
+                                <!--        <option>Name</option>-->
+                                <!--        <option>Price</option>-->
+                                <!--        <option>Size</option>-->
+                                <!--    </select>-->
+                                <!--</div>-->
+                                <!--<div class="short-by page">-->
+                                <!--    <label>Show:</label>-->
+                                <!--    <select>-->
+                                <!--        <option selected="selected">16</option>-->
+                                <!--        <option>20</option>-->
+                                <!--        <option>25</option>-->
+                                <!--        <option>30</option>-->
+                                <!--    </select>-->
+                                <!--</div>-->
                             </div>
                         </div>
                         <div class="product-grid-area">
                             <ul class="products-grid"><?php
                                 foreach($listing as $listShop){ ?>
                                     <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
-                                        <div class="product-item">
+                                        <div class="product-item" ">
                                             <div class="item-inner">
                                                 <div class="product-thumbnail">
                                                     <div class="icon-sale-label sale-left">For Sale</div>
@@ -70,8 +70,8 @@
                                                     <div class="pr-img-area"> 
                                                         <a title="Product title here" href="product_details.php?slug=<?php echo $listShop['slug']; ?>">
                                                             <figure> 
-                                                                <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="HTML template"> 
-                                                                <img class="hover-img" src="<?php echo 'assets/images/product/'.$related['image']; ?>" alt="<?php echo $listShop['product_name'] ?>">
+                                                                <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="" style="height:250px;"> 
+                                                                <img class="hover-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="<?php echo $listShop['product_name'] ?>">
                                                             </figure>
                                                         </a> 
                                                     </div>
@@ -94,10 +94,10 @@
                                                         </div>
                                                         <div class="item-content">
                                                             <div class="rating"> <i class="fa fa-star"></i> 
-                                                                <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> 
-                                                                <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
-                                                                <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> 
-                                                                <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
                                                             </div>
                                                             <div class="item-price">
                                                                 <div class="price-box"> <span class="regular-price"> 
@@ -117,26 +117,28 @@
                                 
                             </ul>
                         </div>
-                        <div class="pagination-area ">
+                        <div class="pagination-area">
                             <?php 
                             if($totalItems > 0){ ?>
                                 <ul>
                                     <?php $b = $page - 1;
                                     if($page != 1){ ?>
-                                        <li class="prev"><a href="shop.php&&page=<?php echo $page - 1?>" 
-                                            class="buy-btn">Previous <i class="fa fa-angle-left"></i></a>
-                                        </li>
-                                    <?php } ?>
-
-                                    <?php if($page != $totalPages){ ?>
-                                        <li><a href="shop.php&&page=<?php echo $page + 1?>" 
-                                            class="buy-btn"> Next Page</a>
-                                        </li>
-                                    <?php } ?>                                        
+                                        <li><a href="shop.php?page=<?php echo $page - 1?>" class="active">
+                                        <i class="fa fa-angle-left">Previous</i></a></li>
+                                    
+                                        <?php 
+                                    } 
+                                    if($page != $totalPages){ ?>
+                                        <li><a href="shop.php?page=<?php echo $page + 1?>" class="active">
+                                        <i class="fa fa-angle-right">Next </i></a></li>
+                                    
+                                       <?php 
+                                    } ?>
                                 </ul>
                                 <p class="result-count">Showing <?php echo $totalItems ?> of <?php echo $itemsPerPage ?> result</p><?php 
                             } ?>
                         </div>
+                        
                     </div>
                 </div>
             </div>

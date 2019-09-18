@@ -48,7 +48,7 @@
                             
                             <div class="product-grid-area">
                                 <ul class="products-grid"><?php
-                                    foreach($seeWishList as $list){
+                                    foreach($register->gettingWishList($reg_number) as $list){
                                         $slug = $list['slug'];
                                         $listShop = $product->getSingleProduct($slug); ?>
                                         <li class="item col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
@@ -57,17 +57,16 @@
                                                     <div class="product-thumbnail">
                                                         <div class="icon-new-label new-left">New</div>
                                                         <div class="pr-img-area"> 
-                                                            <a title="Product title here" href="product_details.php?slug=<?php echo $listShop['slug']; ?>">
+                                                            <a title="<?php echo $listShop['product_name'] ?>" href="product_details.php?slug=<?php echo $listShop['slug']; ?>">
                                                                 <figure> 
-                                                                    <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="HTML template"> 
-                                                                    <img class="hover-img" src="<?php echo 'assets/images/product/'.$related['image']; ?>" alt="<?php echo $listShop['product_name'] ?>">
+                                                                    <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="" style="height:250px;"> 
+                                                                    <img class="hover-img" src="<?php echo 'assets/images/product/'.$related['image']; ?>" alt="<?php echo $listShop['product_name'] ?>" >
                                                                 </figure>
                                                             </a> 
                                                         </div>
                                                         <div class="pr-info-area">
                                                             <div class="pr-button">
-                                                                <div class="mt-button add_to_wishlist"> <a href="handlers/registration/addit.php?slug=<?php echo $listShop['slug'] ?>
-                                                                &&action=<?php echo 'Delete Wishlist'?>&&list_id=<?php echo $list['list_id'] ?>"> 
+                                                                <div class="mt-button add_to_wishlist"> <a href="handlers/registration/addit.php?slug=<?php echo $listShop['slug'] ?>&&action=<?php echo 'Delete Wishlist'?>&&list_id=<?php echo $list['list_id'] ?>"> 
                                                                     <i class="fa fa-trash-o"></i> </a> 
                                                                 </div>
                                                                 <div class="mt-button add_to_compare"> <a href="handlers/registration/addit.php?slug=<?php echo $listShop['slug'] ?>&&action=<?php echo 'Compare' ?>"> 

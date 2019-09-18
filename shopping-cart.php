@@ -6,9 +6,9 @@
         $_SESSION['error'] = "Please Register Or Login into Your Account"; 
     }
 
-    if(!isset($_SESSION['cart'])){ ?>
+    if(!isset($_SESSION['cart'])){ 
+    	$_SESSION['error'] = "Your Shopping Cart is Empty"; ?>
     	<script type="text/javascript"> window.location=('shop.php');</script><?php
-        $_SESSION['error'] = "Your Shopping Cart is Empty"; 
 
     } 
     $reg_number = $_SESSION['reg_number'];

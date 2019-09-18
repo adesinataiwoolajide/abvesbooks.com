@@ -41,8 +41,9 @@
 									<thead>
 										<tr>
                                             <th>S/N</th>
-                                            <th>Image</th>
                                             <th> Name</th>
+                                            <th>Image</th>
+                                            
                                             <th>Quantity</th>
                                             <th>Amount</th>
 										</tr>
@@ -51,8 +52,9 @@
 									<tfoot>
 										<tr>
                                         <th>S/N</th>
-                                            <th>Image</th>
                                             <th> Name</th>
+                                            <th>Image</th>
+                                           
                                             <th>Quantity</th>
                                             <th>Amount</th>
 										</tr>

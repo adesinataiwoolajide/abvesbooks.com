@@ -170,7 +170,7 @@
                                         <table class="table table-hover table-responsive">
                                             <tbody>                                    
                                                 <tr>
-                                                    <td>Product NNumberame</td  > 
+                                                    <td>Product Number</td  > 
                                                     <td><?php echo $slug ?></td>
                                                 </tr>
                                             </tbody>

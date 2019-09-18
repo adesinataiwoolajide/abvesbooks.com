@@ -13,7 +13,7 @@
 			$full_name = $all_purpose->sanitizeInput($_POST['full_name']);
 			$password = $all_purpose->sanitizeInput(sha1($_POST['password']));
 			$repeat = $all_purpose->sanitizeInput(sha1($_POST['repeat']));
-
+			$return = $_POST['return'];
 			if($password != $repeat){
 				$return = $_POST['return'];
 				$_SESSION['error'] = "Ooops! Password Does Not Match";
@@ -22,8 +22,17 @@
 				if($register->updateUserdetailsID($user_name, $full_name, $password)){
 					$action= "$user_name Retrieved Account";
 					$his= $all_purpose->operationHistory($action, $email);
+					$myDetails = $register->CustomerLogin($user_name, $password);
+				
+					$_SESSION['id'] = $myDetails['registration_id'];
+					$_SESSION['name'] = $myDetails['full_name'];
+					$_SESSION['user_name'] = $myDetails['user_name'];
+					$_SESSION['reg_number'] = $myDetails['reg_number'];
+					$reg_number = $_SESSION['reg_number'];
+					$_SESSION['success'] = $_SESSION['name']. " Welcome To Your Dashboard";
+
 					$_SESSION['success'] = "$full_name You Have Changed Your Password Successfully";
-					$all_purpose->redirect("../../login.php");
+					$all_purpose->redirect("../../dashboard.php");
 				}else{
 					$return = $_POST['return'];
 					$_SESSION['error'] = "Network Failure Please Try Again Later";

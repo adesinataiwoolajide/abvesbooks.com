@@ -62,8 +62,8 @@
                                                         <div class="pr-img-area"> 
                                                             <a title="Product title here" href="product_details.php?slug=<?php echo $listShop['slug']; ?>">
                                                                 <figure> 
-                                                                    <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="HTML template"> 
-                                                                    <img class="hover-img" src="<?php echo 'assets/images/product/'.$related['image']; ?>" alt="<?php echo $listShop['product_name'] ?>">
+                                                                    <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="" style="height:250px;> 
+                                                                    <img class="hover-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="<?php echo $listShop['product_name'] ?>">
                                                                 </figure>
                                                             </a> 
                                                         </div>
@@ -86,10 +86,10 @@
                                                             </div>
                                                             <div class="item-content">
                                                                 <div class="rating"> <i class="fa fa-star"></i> 
-                                                                    <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> 
-                                                                    <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
-                                                                    <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> 
-                                                                    <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
                                                                 </div>
                                                                 <div class="item-price">
                                                                     <div class="price-box"> <span class="regular-price"> 
@@ -110,25 +110,27 @@
                                 </ul>
                             </div>
                             <div class="pagination-area">
-                            <?php 
+                                <?php 
                                 if($totalItems > 0){ ?>
                                     <ul>
                                         <?php $b = $page - 1;
                                         if($page != 1){ ?>
-                                            <li class="prev"><a href="product_types.php?type_name=<?php echo $type_name ?>&&page=<?php echo $page - 1?>" 
-                                                class="buy-btn">Previous <i class="fa fa-angle-left"></i></a>
-                                            </li>
-                                        <?php } ?>
-
-                                        <?php if($page != $totalPages){ ?>
-                                            <li><a href="product_types.php?type_name=<?php echo $type_name ?>&&page=<?php echo $page + 1?>" 
-                                                class="buy-btn"> Next Page</a>
-                                            </li>
-                                        <?php } ?>                                        
+                                            <li><a href="product_types.php?type_name=<?php echo $type_name ?>&&page=<?php echo $page - 1?>" class="active">
+                                            <i class="fa fa-angle-left">Previous</i></a></li>
+                                        
+                                            <?php 
+                                        } 
+                                        if($page != $totalPages){ ?>
+                                            <li><a href="product_types.php?type_name=<?php echo $type_name ?>&&page=<?php echo $page + 1?>" class="active">
+                                            <i class="fa fa-angle-right">Next </i></a></li>
+                                        
+                                           <?php 
+                                        } ?>
                                     </ul>
                                     <p class="result-count">Showing <?php echo $totalItems ?> of <?php echo $itemsPerPage ?> result</p><?php 
                                 } ?>
                             </div>
+                            
                         </div>
                         <?php 
                     } ?>

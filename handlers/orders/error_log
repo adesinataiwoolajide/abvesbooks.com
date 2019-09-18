@@ -1,3 +1,13 @@
 [15-Nov-2018 13:44:12 Africa/Lagos] PHP Warning:  mail() expects parameter 2 to be string, array given in /home2/chamronn/public_html/coopco.ng/dev/handlers/orders/saveOrder.php on line 41
 [15-Nov-2018 13:44:12 Africa/Lagos] PHP Warning:  mail() expects parameter 2 to be string, array given in /home2/chamronn/public_html/coopco.ng/dev/handlers/orders/saveOrder.php on line 41
 [16-Nov-2018 04:55:24 Africa/Lagos] PHP Notice:  Undefined index: paystackReference in /home2/chamronn/public_html/coopco.ng/dev/handlers/orders/verifyTransaction.php on line 17
+[17-May-2019 09:16:37 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/test/handlers/orders/saveOrder.php on line 69
+[17-May-2019 09:54:11 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/test/handlers/orders/saveOrder.php on line 69
+[13-Jun-2019 16:18:46 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[13-Jun-2019 16:29:27 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[13-Jun-2019 16:41:02 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[14-Jun-2019 10:03:50 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[18-Jul-2019 14:10:53 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[20-Jul-2019 15:27:39 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[21-Jul-2019 02:25:43 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75
+[21-Jul-2019 17:39:26 Africa/Lagos] PHP Notice:  Undefined property: stdClass::$status in /home/abvesboo/public_html/handlers/orders/saveOrder.php on line 75

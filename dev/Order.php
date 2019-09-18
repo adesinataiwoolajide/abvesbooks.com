@@ -399,6 +399,20 @@
 			return $query->fetchAll(PDO::FETCH_ASSOC);
 		}
 
+		public function updateOnlinePaymentStatus($customer_id, $reference)
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("UPDATE customer_order SET paid_status = 1 WHERE customer_id = :customer_id AND paystack_reference=:reference");
+			$query->bindValue(':customer_id', $customer_id);
+			$query->bindValue(':reference', $reference);
+			if(!empty($query->execute())){
+				return true;
+			}else{
+				return false;
+			}
+			
+		}
+
 		public function unconfirmPayment()
 		{
 			$db = Database::getInstance()->getConnection();

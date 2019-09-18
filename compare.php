@@ -8,7 +8,7 @@
     $reg_number = $_GET['reg_number'];
     $totalItems =  count($register->gettingCompNoPag($reg_number));
 
-    $seeWishList = $register->gettingCompNoPag($reg_number);
+    $seeCompList = $register->gettingCompNoPag($reg_number);
 ?>
     <div class="breadcrumbs">
         <div class="container">
@@ -48,7 +48,7 @@
                             
                             <div class="product-grid-area">
                                 <ul class="products-grid"><?php
-                                    foreach($seeWishList as $list){
+                                    foreach($seeCompList as $list){
                                         $slug = $list['slug'];
                                         $listShop = $product->getSingleProduct($slug); ?>
                                         <li class="item col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
@@ -57,10 +57,10 @@
                                                     <div class="product-thumbnail">
                                                         <div class="icon-new-label new-left">New</div>
                                                         <div class="pr-img-area"> 
-                                                            <a title="Product title here" href="product_details.php?slug=<?php echo $listShop['slug']; ?>">
+                                                            <a title="" href="product_details.php?slug=<?php echo $listShop['slug']; ?>" style="height:250px;">
                                                                 <figure> 
-                                                                    <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="HTML template"> 
-                                                                    <img class="hover-img" src="<?php echo 'assets/images/product/'.$related['image']; ?>" alt="<?php echo $listShop['product_name'] ?>">
+                                                                    <img class="first-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="" style="height:250px;"> 
+                                                                    <img class="hover-img" src="<?php echo 'assets/images/product/'.$listShop['image']; ?>" alt="<?php echo $listShop['product_name'] ?>" style="height:250px;">
                                                                 </figure>
                                                             </a> 
                                                         </div>
@@ -88,10 +88,10 @@
                                                             </div>
                                                             <div class="item-content">
                                                                 <div class="rating"> <i class="fa fa-star"></i> 
-                                                                    <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> 
-                                                                    <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
-                                                                    <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> 
-                                                                    <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
+                                        <i class="fa fa-star"></i> 
                                                                 </div>
                                                                 <div class="item-price">
                                                                     <div class="price-box"> <span class="regular-price"> 

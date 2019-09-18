@@ -111,9 +111,22 @@ $register = new newCustomerRegistration($db);
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="sidebar-submenu">
-                        <li><a href="unshipped.php"><i class="zmdi zmdi-long-arrow-right"></i> Unshipped Order</a></li>
-                        <li><a href="shipped-product.php"><i class="zmdi zmdi-long-arrow-right"></i> Shipped Order</a></li>
-                        <li><a href="view-products.php"><i class="zmdi zmdi-long-arrow-right"></i> Deliver Product</a></li>
+                        <li><a href="unshipped-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Unshipped Order</a></li>
+                        <li><a href="shipped-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Shipped Order</a></li>
+                        <!-- <li><a href="view-products.php"><i class="zmdi zmdi-long-arrow-right"></i> Delivered Product</a></li> -->
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="waves-effect">
+                        <i class="fa fa-book text-success"></i> <span>Delivery</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="sidebar-submenu">
+                        
+                        <!-- <li><a href="shipped-product.php"><i class="zmdi zmdi-long-arrow-right"></i> Undelivered Order</a></li> -->
+                        <li><a href="delivered-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Delivered Order</a></li>
+                        <li><a href="deliver-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Deliver Order</a></li>
+                        <li><a href="undelivered-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Un Deliver Order</a></li>
                     </ul>
                 </li>
                 <li>
@@ -123,13 +136,15 @@ $register = new newCustomerRegistration($db);
                     </a>
                     <ul class="sidebar-submenu">
                         <li><a href="unshipped-order.php"><i class="zmdi zmdi-long-arrow-right"></i> New Order</a></li>
-                        <li><a href="shipped-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Ship Product</a></li>
-                        <li><a href="view-products.php"><i class="zmdi zmdi-long-arrow-right"></i> Deliver Product</a></li>
+                        <li><a href="shipped-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Ship Order</a></li>
+                        <li><a href="delivered-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Deliver Order</a></li>
+
+                        <li><a href="undelivered-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Un Deliver Order</a></li>
                         <li><a href="customer-order.php"><i class="zmdi zmdi-long-arrow-right"></i> All Order</a></li>
 
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="" class="waves-effect">
                         <i class="zmdi zmdi-view-dashboard"></i> <span>Customers</span>
                         <i class="fa fa-angle-left pull-right"></i>
@@ -138,7 +153,7 @@ $register = new newCustomerRegistration($db);
                         <li><a href="customer-order.php"><i class="zmdi zmdi-long-arrow-right"></i> Order</a></li>
                         <li><a href=""><i class="zmdi zmdi-long-arrow-right"></i> Details</a></li>
                     </ul>
-                </li>
+                </li> -->
             
                 <li><a href="user.php" class="waves-effect"><i class="fa fa-users text-success"></i> <span>Users</span></a></li>
     

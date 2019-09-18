@@ -3,15 +3,23 @@
 	require_once '../../connection/connection.php';
 	require_once '../../dev_class/register/customer_registration_class.php';
 	require_once '../../dev/general/all_purpose_class.php';
-	require_once '../../dev/autoload.php';
+	//require_once '../../dev/autoload.php';
 	$all_purpose = new all_purpose($db);
 	$register = new newCustomerRegistration($db);
+	
+	use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    // Load Composer's autoloader
+    require '../../vendor/auto.php';
+	//require '../../dev/PHPMailerAutoload.php'; // Phpmail package already on server
+
 
 	try {
 		
 		if(isset($_POST['register'])){
 			$full_name = $all_purpose->sanitizeInput($_POST['full_name']);
-			$user_name = $all_purpose->sanitizeInput($_POST['user_name']);
+			echo $user_name = $all_purpose->sanitizeInput($_POST['user_name']);
 			$password = $all_purpose->sanitizeInput(sha1($_POST['password']));
 			$repeat = $all_purpose->sanitizeInput(sha1($_POST['repeat']));
 			function generateRandomHash($length)
@@ -19,7 +27,7 @@
 				return strtoupper(substr(md5(uniqid(rand())), 0, (-32 + $length)));
 			}	
 			$reg_number = strtoupper(generateRandomHash(10));
-			//$number = strtoupper(generateRandomHash(15));
+			$number = strtoupper(generateRandomHash(15));
 			if($password != $repeat){
 				$_SESSION['error'] = "Ooops! Password Does Not Match";
 				$all_purpose->redirect("../../login.php");
@@ -28,20 +36,19 @@
 				$all_purpose->redirect("../../login.php");
 			}else{
 				$email = $user_name;
-				//if(!empty($register->newUserRegistration($full_name, $user_name, $password, $reg_number))){
+				if(!empty($register->newUserRegistration($full_name, $user_name, $password, $reg_number))){
 					$action= "$user_name Successfully Registered Account on the website";
 					$his= $all_purpose->operationHistory($action, $email);
-
-					require '../../mailer/PHPMailerAutoload.php'; // Phpmail package already on server
 					$mail = new PHPMailer();
-
-					$mail->IsSMTP(); // telling the class to use SMTP
-					$mail->SMTPAuth = true; // enable SMTP authentication
-					$mail->Host = "localhost"; // sets the SMTP server
-					$mail->Port = 25; // set the SMTP port for the GMAIL server
-					$mail->Username = "tosin@trenchcoregroup.com"; // SMTP account username
-					$mail->Password = "testing1234!EMAIL"; // SMTP account password
-
+					$mail->IsSMTP();
+					$mail->SMTPAuth = true; 
+					$mail->Host = "mail.abvesbooks.com"; 
+					$mail->Port = 465; 
+					$mail->SMTPSecure = 'ssl'; 
+                    
+					$mail->Username = "info@abvesbooks.com"; 
+					$mail->Password = "adesinataiwo"; 
+                    $mail->isHTML(true);     
 					$mail->SetFrom('info@abvesbooks.com', 'Account Confirmation');
 					$mail->AddReplyTo("info@abvesbooks.com","Account Confirmation");
 					$mail->Subject = "Account Activation Link";
@@ -58,7 +65,8 @@
 						<p>
 						Please Click on The link below to confirm your account
 						</p>
-						<a href = localhost/abvesbooks.com/activate-account.php?registration_number=$reg_number target=_blank>Click here to activate your account.</a><br /> 
+						<a href='https://abvesbooks.com/handlers/registration/activate-account.php?registration_number=$reg_number' target='_blank'>Click here to activate your account.</a>
+						<br /> 
 						<p>
 							Thank you for your patronage.
 						</p>
@@ -67,26 +75,25 @@
 						Thank you. <br />");
 					$mail->AddAddress($user_name);
 					//$mail->AddAttachment(""); // attachment
-
+                    //$mail->SMTPDebug = 2;
 					if(!$mail->Send()) {
+					    
 					echo "Mailer Error: " . $mail->ErrorInfo;
 					} else {
-					echo "Message sent!";
-					// header("Location: http://www.example.com/");
+					    $_SESSION['success'] = "$full_name You Have Completed Your Registration Successfully, Please Check Your E-Mail for the Verification Link";
+				        $all_purpose->redirect("../../login.php");
 					}
+
+			
 				
-					// if(!empty(Email::sendUserRegistrationLink($full_name, $reg_number, $user_name))){
-					// 	$_SESSION['success'] = "$full_name You Have Completed Your Registration Successfully, Please Check Your $user_name for a link to Activate Your Account";
-					// 	$all_purpose->redirect("../../login.php");
-					// } else{
-					// 	echo "Ejndb hvdbh";
-					// }
 					
-				// }else{
-				// 	$_SESSION['error'] = "Unable to Complete Your Registration at the moment, Please Try Again Later";
-				// 	$all_purpose->redirect("../../login.php");
-				// }
-			}
+				}else{
+					$_SESSION['error'] = "Unable to Complete Your Registration at the moment, Please Try Again Later";
+					$all_purpose->redirect("../../login.php");
+				}
+				
+				    
+		}
 
 		}else{
 			$_SESSION['error'] = "Please Fill The Below Form To Register Your Account";

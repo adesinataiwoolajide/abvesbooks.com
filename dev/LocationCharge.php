@@ -72,6 +72,15 @@
 			return $query->fetch();
         }
         
+        public function getSingleLocationTown($location_state)
+		{
+			$db = Database::getInstance()->getConnection();
+            $query = $db->prepare("SELECT * FROM shipping_location_charge WHERE location=:location_state");
+            $query->bindValue(":location_state", $location_state);
+			$query->execute();
+			return $query->fetch();
+        }
+        
         public function getSingleLocationList($location_id)
 		{
 			$db = Database::getInstance()->getConnection();

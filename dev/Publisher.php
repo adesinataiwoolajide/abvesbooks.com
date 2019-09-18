@@ -86,6 +86,15 @@
 			$query->execute();
 			return $query->fetchAll(PDO::FETCH_ASSOC);
         }
+        
+        public function getAllPublisherListing()
+		{
+			$db = Database::getInstance()->getConnection();
+			$query = $db->prepare("SELECT * FROM publishers ORDER BY publisher_id desc LIMIT 0,10");
+			$query->execute();
+			return $query->fetchAll(PDO::FETCH_ASSOC);
+        }
+
 
          public function getAllPublisherSide()
 		{

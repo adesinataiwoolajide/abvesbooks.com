@@ -54,14 +54,14 @@ try{
 
                     $action = "Updated $product_name stock with $quantity quantity";
                     $his = $all_purpose->getUserDetailsandAddActivity($email, $action);
-                    $_SESSION['success'] = "You Have Added Product with the Product Name $product_name with the Product Number $slug Successfully";
+                    $_SESSION['success'] = "You Have Updated Product with the Product Name $product_name with the Product Number $slug Successfully";
                     $all_purpose->redirect($return);
 
                 }else{
                     $add_stock = $product->addProductStock($product_name, $category_id, $genre_id, $quantity, $publisher_id, $edition);
                     $action = "Added $product_name with $slug to the stock list";
                     $his = $all_purpose->getUserDetailsandAddActivity($email, $action);
-                    $_SESSION['success'] = "You Have Added Product with the Product Name $productname with the Product Number $slug Successfully";
+                    $_SESSION['success'] = "You Have Updated Product with the Product Name $productname with the Product Number $slug Successfully";
                     $all_purpose->redirect($return);
                         
                 }
@@ -100,14 +100,14 @@ try{
 
                         $action = "Updated $product_name stock with $quantity quantity";
                         $his = $all_purpose->getUserDetailsandAddActivity($email, $action);
-                        $_SESSION['success'] = "You Have Added Product with the Product Name $product_name with the Product Number $slug Successfully";
+                        $_SESSION['success'] = "You Have Updated Product with the Product Name $product_name with the Product Number $slug Successfully";
                         $all_purpose->redirect($return);
 
                     }else{
                         $add_stock = $product->addProductStock($product_name, $category_id, $genre_id, $quantity, $publisher_id, $edition);
                         $action = "Added $product_name with $slug to the stock list";
                         $his = $all_purpose->getUserDetailsandAddActivity($email, $action);
-                        $_SESSION['success'] = "You Have Added Product with the Product Name $productname with the Product Number $slug Successfully";
+                        $_SESSION['success'] = "You Have Updated Product with the Product Name $productname with the Product Number $slug Successfully";
                         $all_purpose->redirect($return);
                             
                     }

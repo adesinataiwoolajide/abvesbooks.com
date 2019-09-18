@@ -33,8 +33,8 @@
 <![endif]-->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>ABVES Books & Stationaries</title>
-<meta name="Details about website here.">
-<meta name="Details about website here"/>
+<meta name="We Sell Books and Stationaries.">
+<meta name="Abves Books and Stationaries."/>
 
 <!-- Mobile specific metas  -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,17 +90,17 @@
                             </div>
                         
                             <!-- top links -->
-                            <div class="headerlinkmenu col-md-8 col-sm-8 col-xs-12"> <span class="phone  hidden-xs hidden-sm">Call Us: +123.456.789</span>
+                            <div class="headerlinkmenu col-md-8 col-sm-8 col-xs-12"> <span class="phone  hidden-xs hidden-sm">Call Us: +(234) 07 613 620 19</span>
                                 <ul class="links"><?php 
 								    if(!isset($_SESSION['id'])){ ?>
                                         <li><a href="shop.php">Shop</a></li>
-                                        <li><a href="">About us</a></li>
-                                        <li class="hidden-xs"><a title="Help Center" href=""><span>Help Center</span></a></li>
-                                        <li><a title="Store Locator" href=""><span>Store Locator</span></a></li>
+                                        <li><a href="aboutus.php">About us</a></li>
+                                        <li class="hidden-xs"><a title="Help Center" href="contactus.php"><span>Contact Us</span></a></li>
+                                        
                                         <li><a title="login" href="login.php"><span>Login</span></a></li>
                                         <li><a title="login" href="login.php"><span>Register</span></a></li><?php 
                                     }else{ ?>
-                                        <li><a href="">Contact us</a></li>
+                                        <li><a title="Dashboard" href="dashboard.php"><span>Dashboard</span></a></li>
                                         <li><a href="my_orders.php?registration_number=<?php echo $_SESSION['reg_number'] ?>">Order Tracking</a></li>
                                         <li><a title="Checkout" href="check-out.php"><span>Checkout</span></a></li>
                                         <li><a title="Log Out" href="logout.php"><span>Logout</span></a></li><?php
@@ -116,16 +116,16 @@
                         <div class="row">
                             <div class="col-sm-3 col-xs-12 jtv-logo-block"> 
                                 <div class="logo"><a title="<?php echo "ABVES Books and Stationaries"; ?>" href="./">
-                                    <img alt="Shopping" title="Shopping" src="assets/images/abv.png" 
+                                    <img alt="Shopping" title="ABVES Books and Stationaries" src="assets/images/abv.png" 
                                     style="width:80px ; height: 60px; margin-top:10px"></a> 
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-4 col-md-5 jtv-top-search" style="margin-left: ">  
                                 <div class="top-search">
                                     <div id="search">
-                                        <form>
+                                        <form action="search_product.php" method="POST">
                                             <div class="input-group">
-                                                <select class="cate-dropdown hidden-xs hidden-sm" name="category_id">
+                                                <select class="cate-dropdown hidden-xs hidden-sm" name="category_name">
                                                     <option>All Categories</option>
                                                     <?php 
                                                     foreach($category->getAllCategory() as $listCate){ ?>
@@ -135,8 +135,8 @@
                                                     } ?>
                                                     
                                                 </select>
-                                                <input type="text" class="form-control" placeholder="Enter your search..." name="search">
-                                                <button class="btn-search" type="button"><i class="fa fa-search"></i></button>
+                                                <input type="text" class="form-control" name="name" placeholder="Enter your search...">
+                                                <button class="btn-search" type="submit" name="search_product"><i class="fa fa-search"></i></button>
                                             </div>
                                         </form>
                                     </div>
@@ -198,7 +198,7 @@
                                                             array_push($wey, $foo);
                                                             array_push($total, $cal);
                                                         } ?>
-                                                        <li class="item"> <a href="shopping-cart.php" title="Product title here" 
+                                                        <li class="item"> <a href="shopping-cart.php" title="" 
                                                             class="product-image"><img src="<?php echo "assets/images/product/".$details['image'] ?>"
                                                              alt="html Template" width="65">
                                                             </a>
@@ -224,7 +224,7 @@
                                         }else{ ?>
                                             <div class="mini-cart">
                                                 <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> 
-                                                    <a href="">
+                                                    <a href="shop.php">
                                                         <div class="cart-icon"><i class="icon-basket-loaded icons"></i><span class="cart-total">
                                                         <?php echo 0 ?></span></div>
                                                         <div class="shoppingcart-inner hidden-xs"><span class="cart-title"></span> </div>
@@ -294,8 +294,11 @@
                                 <ul class="nav">
                                     <li class="nosub"><a href="./">Home</a></li><?php
                                     foreach($type->getAllProductType() as $seeType){  
-                                        $type_id = $seeType['type_id']; ?> 
-                                        <li><a href=""><?php echo $seeType['type_name']; ?></a>
+                                        $type_id = $seeType['type_id'];  
+                                         $type_name= $seeType['type_name']; ?> 
+                                        <li><a href="product_types.php?type_name=<?php echo $type_name ?>"><?php echo $seeType['type_name']; ?></a>
+                                        
+                                        
                                             <div class="wrap-popup column1">
                                                 <div class="popup">
                                                     <ul class="nav"><?php

@@ -340,13 +340,12 @@
 		public function gettingWishList($reg_number)
 		{
 			try{
-				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id = :reg_number AND action='Wishlist'
-
-					ORDER BY list_id DESC");
+				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id = :reg_number AND action='Wishlist' ORDER BY list_id DESC");
 				$query->bindValue(":reg_number", $reg_number);
 				
 				$query->execute();
-				return $query->fetchAll(PDO::FETCH_ASSOC);
+				$b = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $b;
 			} catch (PDOException $e) {
 				$_SESSION['error'] = $e->getMessage();
 				return false;
@@ -387,9 +386,9 @@
 			try{
 				$query = $this->db->prepare("SELECT * FROM wishlist WHERE customer_id = :reg_number AND action='Compare'");
 				$arrQ = array(':reg_number'=>$reg_number);
-
 				$query->execute($arrQ);
-				return $query->fetchAll(PDO::FETCH_ASSOC);
+				$a = $query->fetchAll(PDO::FETCH_ASSOC);
+				return $a;
 			} catch (PDOException $e) {
 				$_SESSION['error'] = $e->getMessage();
 				return false;

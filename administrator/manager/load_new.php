@@ -8,7 +8,7 @@ $db = Database::getInstance()->getConnection();
 $query = $db->prepare("SELECT * FROM genre WHERE type_id=:new");
 $query->bindValue(":new", $new);
 $query->execute();
-echo'<label for="input-6">Weight Amount </label>';
+echo'<label for="input-6">Sub Type Name </label>';
 echo '<select class="form-control form-control-rounded" name="genre_id">';
 	while($listType = $query->fetch()) { ?>
 		<option value="<?php echo  $listType['genre_id'] ?>" selected>

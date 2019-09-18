@@ -21,7 +21,7 @@
             <div class="col-sm-9">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">Home</a></li>
-                    <li class="breadcrumb-item"><a href="shipped-product.php">Shipped Order</a></li>
+                    <li class="breadcrumb-item"><a href="shipped-order.php">Shipped Order</a></li>
                     <li class="breadcrumb-item"><a href="unshipped-order.php">Unshipped Order</a></li>
                     <li class="breadcrumb-item"><a href="view-order.php">View All Order</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Shipped Customer Orders</li>
@@ -73,8 +73,9 @@
 											<tr>
 												<td><?php echo $number; ?>
                                                     <a href="ship-order.php?order_number=<?php echo $orderId ?>" class="btn btn-success">
-                                                        <i class="fa fa-cogs"></i>
+                                                        <i class="fa fa-cogs"></i>Details
                                                     </a>
+                                                    
                                                 </a>
                                                 </td><?php
                                                 $reg_number = $level['reg_number'];
